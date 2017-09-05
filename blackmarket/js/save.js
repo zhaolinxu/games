@@ -14,7 +14,7 @@ function loadData() {
             window[allVars[i]] = getItem(key + allVars[i]);
         };
     };
-    Log("Savegame loaded! Game have to check things before playing.");
+    Log("游戏存档已加载！ 游戏必须在玩前检查事情。");
 };
 function resetData() {
     for (var i = 0; i < allVars.length; i++) {
@@ -22,14 +22,14 @@ function resetData() {
     };
 };
 function hardReset() {
-    if (confirm("You are trying to hard-reset your save, it means that you will be restarting everything from scratch without any multiplier or bonuses! Note : this is not the prestige reset/soft-reset.")) {
+    if (confirm("你在进行硬复位，也就是你将从头开始，并且没有任何的经验和奖金！注意:这不是声望复位/软复位!")) {
         window.clearInterval(intSave);
         resetData();
         location.reload();
     };
 };
 function softReset() {
-    if (confirm("You are trying to soft-reset. This means that you will start the game over but with " + fix(prestige[1], "prestige") + " experience. Check-out the tables panel to verify if you will get a prestige multiplier after your reset.")) {
+    if (confirm("你正在进行软复位。你将获得" + fix(prestige[1], "prestige") + " 点经验并且重新开始游戏。点击表格框查看更多声望奖励信息。")) {
         window.clearInterval(intSave);
         var temp = money[1];
         var temp2 = prestige[1];
@@ -175,8 +175,8 @@ function checkCode() {
             kongregate.services.connect();
             username = kongregate.services.getUsername();
             authtoken = kongregate.services.getGameAuthToken();
-            $("#betatest-welcome").html("Welcome beta-tester <b>" + username + "</b>! Thanks for beta-testing this new section.");
-            $("#betatest-authtoken").html("Your authtoken is : <small><b>" + authtoken + "</b></small>");
+            $("#betatest-welcome").html("欢迎beta版测试者 <b>" + username + "</b>! 感谢您测试这个新版本。");
+            $("#betatest-authtoken").html("你的开发者token是 : <small><b>" + authtoken + "</b></small>");
         } else {
             $("#alert-konglog").css("display", "block");
         };

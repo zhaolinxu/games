@@ -1,25 +1,25 @@
 var weedBuildsOwned;
 var weedBuilds = [
-    new Build("Closet Grow Room",	250,            	0.5,    1.60, 0),
-    new Build("Backyard",	500000,          	2,    	1.50, 0),
-    new Build("Green House",	25000000,        	4,   	1.40, 0),
-    new Build("Brazilian Farm",	750000000,			8,    	1.30, 0),
+    new Build("壁橱栽培室",	250,            	0.5,    1.60, 0),
+    new Build("后院",	500000,          	2,    	1.50, 0),
+    new Build("温室",	25000000,        	4,   	1.40, 0),
+    new Build("巴西农场",	750000000,			8,    	1.30, 0),
 ];
 
 var methBuildsOwned;
 var methBuilds = [
-    new Build("Mobile RV Lab",    1000000,         	2,    	1.60, 1),
-    new Build("Basement Lab",    750000000,       	4,    	1.50, 1),
-    new Build("Chemical Warehouse",    50000000000,      	8,		1.40, 1),
-    new Build("Professional Chemical Lab",	1000000000000,		12,    	1.30, 1),
+    new Build("移动RV实验室",    1000000,         	2,    	1.60, 1),
+    new Build("地下实验室",    750000000,       	4,    	1.50, 1),
+    new Build("化学品仓库",    50000000000,      	8,		1.40, 1),
+    new Build("专业化学实验室",	1000000000000,		12,    	1.30, 1),
 ];
 
 var cocaineBuildsOwned;
 var cocaineBuilds = [
-    new Build("Small Farm",	25000000000,		4,    	1.60, 2),
-    new Build("Cocaine Field",	750000000000,    	8,    	1.50, 2),
-    new Build("Bolivian Farm",	2500000000000,   	12,		1.40, 2),
-    new Build("Columbian Estate",	1000000000000000, 	20,		1.30, 2),
+    new Build("小农场",	25000000000,		4,    	1.60, 2),
+    new Build("可卡因农场",	750000000000,    	8,    	1.50, 2),
+    new Build("玻利维亚农场",	2500000000000,   	12,		1.40, 2),
+    new Build("哥伦比亚庄园",	1000000000000000, 	20,		1.30, 2),
 ];
 
 function Build(name, price, reward, inflation, jsType) {
@@ -35,43 +35,43 @@ Build.init = function() {
 	for (var i = 0; i < weedBuilds.length; i++) {
 		var w = weedBuilds[i];
 		weedBuildsOwned.push(0);
-		$("#builds-weed").append('<li id="builds-weed-' + (i+1) + '" class="list-group-item cur-p"><b>' + w.name + '</b> cost : $' + fix(getBuildPrice(i, 0), "money") + '<br>Produce ' + fix(getDrugProduction(i, 0), "drug") + "g/sec of <b>weed</b>");
+		$("#builds-weed").append('<li id="builds-weed-' + (i+1) + '" class="list-group-item cur-p"><b>' + w.name + '</b> 花费 : $' + fix(getBuildPrice(i, 0), "money") + '<br>生产 ' + fix(getDrugProduction(i, 0), "drug") + "g/秒  <b>大麻</b>");
 		$("#builds-weed-" + (i+1)).attr("onclick", 'Build.buy(' + i + ', 0);');
-		$("#builds-weed-" + (i+1)).append('<span id="builds-weed-owned-' + (i+1) + '" class="badge">' + weedBuildsOwned[i] + ' owned</span>');
+		$("#builds-weed-" + (i+1)).append('<span id="builds-weed-owned-' + (i+1) + '" class="badge">' + weedBuildsOwned[i] + ' 拥有</span>');
 	};
 	methBuildsOwned = [];
 	for (var i = 0; i < methBuilds.length; i++) {
 		var m = methBuilds[i];
 		methBuildsOwned.push(0);
-		$("#builds-meth").append('<li id="builds-meth-' + (i+1) + '" class="list-group-item cur-p"><b>' + m.name + '</b> cost : $' + fix(getBuildPrice(i, 1), "money") + '<br>Produce ' + fix(getDrugProduction(i, 1), "drug") + "g/sec of <b>meth</b>");
+		$("#builds-meth").append('<li id="builds-meth-' + (i+1) + '" class="list-group-item cur-p"><b>' + m.name + '</b> 花费 : $' + fix(getBuildPrice(i, 1), "money") + '<br>生产 ' + fix(getDrugProduction(i, 1), "drug") + "g/秒  <b>冰毒</b>");
 		$("#builds-meth-" + (i+1)).attr("onclick", 'Build.buy(' + i + ', 1);');
-		$("#builds-meth-" + (i+1)).append('<span id="builds-meth-owned-' + (i+1) + '" class="badge">' + methBuildsOwned[i] + ' owned</span>');
+		$("#builds-meth-" + (i+1)).append('<span id="builds-meth-owned-' + (i+1) + '" class="badge">' + methBuildsOwned[i] + ' 拥有</span>');
 	};
 	cocaineBuildsOwned = [];
 	for (var i = 0; i < cocaineBuilds.length; i++) {
 		var c = cocaineBuilds[i];
 		cocaineBuildsOwned.push(0);
-		$("#builds-cocaine").append('<li id="builds-cocaine-' + (i+1) + '" class="list-group-item cur-p"><b>' + c.name + '</b> cost : $' + fix(getBuildPrice(i, 2), "money") + '<br>Produce ' + fix(getDrugProduction(i, 2), "drug") + "g/sec of <b>cocaine</b>");
+		$("#builds-cocaine").append('<li id="builds-cocaine-' + (i+1) + '" class="list-group-item cur-p"><b>' + c.name + '</b> 花费 : $' + fix(getBuildPrice(i, 2), "money") + '<br>生产 ' + fix(getDrugProduction(i, 2), "drug") + "g/秒  <b>可卡因</b>");
 		$("#builds-cocaine-" + (i+1)).attr("onclick", 'Build.buy(' + i + ', 2);');
-		$("#builds-cocaine-" + (i+1)).append('<span id="builds-cocaine-owned-' + (i+1) + '" class="badge">' + cocaineBuildsOwned[i] + ' owned</span>');
+		$("#builds-cocaine-" + (i+1)).append('<span id="builds-cocaine-owned-' + (i+1) + '" class="badge">' + cocaineBuildsOwned[i] + ' 拥有</span>');
 	};
 };
 Build.check = function() {
 	Log("Calling Build.check()")
 	for (var i = 0; i < weedBuilds.length; i++) {
 		var w = weedBuilds[i];
-		$("#builds-weed-" + (i+1)).html('<b>' + w.name + '</b> cost : $' + fix(getBuildPrice(i, 0), "money") + '<br>Produce ' + fix(getDrugProduction(i, 0), "drug") + "g/sec of <b>weed</b>");
-		$("#builds-weed-" + (i+1)).append('<span id="builds-weed-owned-' + (i+1) + '" class="badge">' + weedBuildsOwned[i] + ' owned</span>');
+		$("#builds-weed-" + (i+1)).html('<b>' + w.name + '</b> 花费 : $' + fix(getBuildPrice(i, 0), "money") + '<br>生产 ' + fix(getDrugProduction(i, 0), "drug") + "g/秒  <b>大麻</b>");
+		$("#builds-weed-" + (i+1)).append('<span id="builds-weed-owned-' + (i+1) + '" class="badge">' + weedBuildsOwned[i] + ' 拥有</span>');
 	};
 	for (var i = 0; i < methBuilds.length; i++) {
 		var m = methBuilds[i];
-		$("#builds-meth-" + (i+1)).html('<b>' + m.name + '</b> cost : $' + fix(getBuildPrice(i, 1), "money") + '<br>Produce ' + fix(getDrugProduction(i, 1), "drug") + "g/sec of <b>meth</b>");
-		$("#builds-meth-" + (i+1)).append('<span id="builds-meth-owned-' + (i+1) + '" class="badge">' + methBuildsOwned[i] + ' owned</span>');		
+		$("#builds-meth-" + (i+1)).html('<b>' + m.name + '</b> 花费 : $' + fix(getBuildPrice(i, 1), "money") + '<br>生产 ' + fix(getDrugProduction(i, 1), "drug") + "g/秒  <b>冰毒</b>");
+		$("#builds-meth-" + (i+1)).append('<span id="builds-meth-owned-' + (i+1) + '" class="badge">' + methBuildsOwned[i] + ' 拥有</span>');		
 	};
 	for (var i = 0; i < cocaineBuilds.length; i++) {
 		var c = cocaineBuilds[i];
-		$("#builds-cocaine-" + (i+1)).html('<b>' + c.name + '</b> cost : $' + fix(getBuildPrice(i, 2), "money") + '<br>Produce ' + fix(getDrugProduction(i, 2), "drug") + "g/sec of <b>cocaine</b>");
-		$("#builds-cocaine-" + (i+1)).append('<span id="builds-cocaine-owned-' + (i+1) + '" class="badge">' + cocaineBuildsOwned[i] + ' owned</span>');		
+		$("#builds-cocaine-" + (i+1)).html('<b>' + c.name + '</b> 花费 : $' + fix(getBuildPrice(i, 2), "money") + '<br>生产 ' + fix(getDrugProduction(i, 2), "drug") + "g/秒  <b>可卡因</b>");
+		$("#builds-cocaine-" + (i+1)).append('<span id="builds-cocaine-owned-' + (i+1) + '" class="badge">' + cocaineBuildsOwned[i] + ' 拥有</span>');		
 	};
 };
 Build.buy = function(index, jsType) {

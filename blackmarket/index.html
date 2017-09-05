@@ -6,12 +6,16 @@
   <link href="favicon.ico" rel="icon" type="image/x-icon" />
   <title>黑市 - 增量游戏</title>
 
-  <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+<!--  <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>-->
+<script src="src/jquery-2.1.4.min.js"></script>
+<!--  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">-->
+ <link rel="stylesheet" href="src/bootstrap.min.css">
   <link rel="stylesheet" href="src/paper.bootstrap.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+<!--  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">-->
+ <link rel="stylesheet" href="src/font-awesome.min.css">
   <link rel="stylesheet" href="css/interface.css">
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<!--  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>-->
+ <script src="src/bootstrap.min.js"></script>
   <script src="src/beautify.js"></script>
 </head>
 
@@ -44,7 +48,7 @@
       <div id="panels-col" class="col-md-5 light">
         <!-- actions panel -->
           <div class="panel panel-primary light">
-            <div class="panel-heading"><h3 class="panel-title center">Actions</h3></div>
+            <div class="panel-heading"><h3 class="panel-title center">动作</h3></div>
             <div class="panel-body">
               <div class="row">
                 <div class="col-md-6 col-xs-6">
@@ -63,17 +67,17 @@
               <br>
               <div class="row">
                 <div class="col-md-6 col-xs-6">
-                  <div id="actions-auto-shoot" class="checkbox tiny-font center"><label><input type="checkbox" id="enableAutoShoot" onclick="shootClick = true; Automation.autoShoot();"> Auto-shooting</label></div>
+                  <div id="actions-auto-shoot" class="checkbox tiny-font center"><label><input type="checkbox" id="enableAutoShoot" onclick="shootClick = true; Automation.autoShoot();"> 自动射击</label></div>
                 </div>
                 <div class="col-md-6 col-xs-6">
-                  <div id="actions-auto-reload" class="checkbox tiny-font center"><label><input type="checkbox" id="enableAutoReload" onclick="reloadClick = true; Automation.autoReload();"> Auto-reloading</label></div>
+                  <div id="actions-auto-reload" class="checkbox tiny-font center"><label><input type="checkbox" id="enableAutoReload" onclick="reloadClick = true; Automation.autoReload();"> 自动装弹</label></div>
                 </div>
               </div>
             </div>
           </div>
         <!-- stats panel -->
           <div class="panel panel-primary light">
-            <div class="panel-heading"><h3 class="panel-title center">Stats</h3></div>
+            <div class="panel-heading"><h3 class="panel-title center">状态</h3></div>
             <div class="panel-body">
               <div class="row">
                 <div class="col-md-6 col-xs-6">
@@ -96,30 +100,30 @@
       <div id="nav-tab-content" class="col-md-7 light">
       <!-- nav pills -->
         <ul class="nav nav-tabs nav-justified" role="tablist">
-          <li><a href="#tab-builds" data-toggle="tab" class="tabs-selectors"><i class="fa fa-users"></i> Drugs/Dealers</a></li>
-          <li class="active"><a href="#tab-up" data-toggle="tab" class="tabs-selectors"><i class="fa fa-arrow-circle-up"></i> Upgrades</a></li>
+          <li><a href="#tab-builds" data-toggle="tab" class="tabs-selectors"><i class="fa fa-users"></i> 建筑/商人</a></li>
+          <li class="active"><a href="#tab-up" data-toggle="tab" class="tabs-selectors"><i class="fa fa-arrow-circle-up"></i> 升级</a></li>
           <li role="presentation" class="dropdown">
-            <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="false">More <span class="caret"></span></a>
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="false">更多 <span class="caret"></span></a>
             <ul class="dropdown-menu" role="menu">
-              <li><a href="#tab-prestige" data-toggle="tab" class="tabs-selectors"><i class="fa fa-star"></i> Prestige</a></li>
+              <li><a href="#tab-prestige" data-toggle="tab" class="tabs-selectors"><i class="fa fa-star"></i> 声望</a></li>
               <li><a href="#tab-prod" data-toggle="tab" class="tabs-selectors"><i class="fa fa-wrench"></i> Factory</a></li>
               <li><a href="#tab-gun" data-toggle="tab" class="tabs-selectors"><i class="fa fa-usd"></i> Gun-Market</a></li>
-              <li><a href="#tab-ach" data-toggle="tab" class="tabs-selectors"><i class="fa fa-trophy"></i> Success</a></li>
+              <li><a href="#tab-ach" data-toggle="tab" class="tabs-selectors"><i class="fa fa-trophy"></i> 成就</a></li>
               <li class="divider"></li>
-              <li><a href="#tab-options" data-toggle="tab" class="tabs-selectors"><i class="fa fa-cog"></i> Options</a></li>
-              <li><a href="#tab-help" data-toggle="tab" class="tabs-selectors"><i class="fa fa-question-circle"></i> Help</a></li>
+              <li><a href="#tab-options" data-toggle="tab" class="tabs-selectors"><i class="fa fa-cog"></i> 选项</a></li>
+              <li><a href="#tab-help" data-toggle="tab" class="tabs-selectors"><i class="fa fa-question-circle"></i> 帮助</a></li>
               <li><a href="#tab-ranks" data-toggle="tab" class="tabs-selectors"><i class="fa fa-table"></i> Ranks</a></li>
-              <li><a href="#tab-patch" data-toggle="tab" class="tabs-selectors"><i class="fa fa-pencil-square-o"></i> Patch</a></li>
+              <li><a href="#tab-patch" data-toggle="tab" class="tabs-selectors"><i class="fa fa-pencil-square-o"></i> 补丁</a></li>
             </ul>
           </li>
         </ul>
       <!-- tabs-content -->
         <div id="tab-content" class="tab-content">
           <div class="tab-pane fade active in" id="tab-up">
-            <div class="well"><div class="checkbox tiny-font center"><label><input type="checkbox" id="showUpgradesOwned" onclick="Upgrade.hide();"> Show upgrades owned</label></div></div>
+            <div class="well"><div class="checkbox tiny-font center"><label><input type="checkbox" id="showUpgradesOwned" onclick="Upgrade.hide();"> 显示已拥有的升级</label></div></div>
             <div class="panel panel-default">
               <div class="panel-heading">
-                <h4 class="panel-title light center"><a data-toggle="collapse" data-parent="#accordion" data-target="#up-shootreward-panel" href="javascript:" class="collapsed">Shoot reward upgrades <span id="up-shootreward-stats"></span><li class="fa fa-caret-down"></li></a></h4>
+                <h4 class="panel-title light center"><a data-toggle="collapse" data-parent="#accordion" data-target="#up-shootreward-panel" href="javascript:" class="collapsed">射击奖励升级 <span id="up-shootreward-stats"></span><li class="fa fa-caret-down"></li></a></h4>
                 <div id="up-shootreward-panel" class="panel-collapse collapse" style="height: 0px;">
                   <div class="panel-body">
                     <ul id="up-shoot-reward" class="list-group"></ul>
@@ -129,7 +133,7 @@
             </div>
             <div class="panel panel-default">
               <div class="panel-heading">
-                <h4 class="panel-title light center"><a data-toggle="collapse" data-parent="#accordion" data-target="#up-shoottime-panel" href="javascript:" class="collapsed">Shoot time upgrades <span id="up-shoottime-stats"></span><li class="fa fa-caret-down"></li></a></h4>
+                <h4 class="panel-title light center"><a data-toggle="collapse" data-parent="#accordion" data-target="#up-shoottime-panel" href="javascript:" class="collapsed">射击时间升级 <span id="up-shoottime-stats"></span><li class="fa fa-caret-down"></li></a></h4>
                 <div id="up-shoottime-panel" class="panel-collapse collapse" style="height: 0px;">
                   <div class="panel-body">
                     <ul id="up-shoot-time" class="list-group"></ul>
@@ -139,7 +143,7 @@
             </div>
             <div class="panel panel-default">
               <div class="panel-heading">
-                <h4 class="panel-title light center"><a data-toggle="collapse" data-parent="#accordion" data-target="#up-shootammo-panel" href="javascript:" class="collapsed">Ammo upgrades <span id="up-ammo-stats"></span><li class="fa fa-caret-down"></li></a></h4>
+                <h4 class="panel-title light center"><a data-toggle="collapse" data-parent="#accordion" data-target="#up-shootammo-panel" href="javascript:" class="collapsed">弹夹升级 <span id="up-ammo-stats"></span><li class="fa fa-caret-down"></li></a></h4>
                 <div id="up-shootammo-panel" class="panel-collapse collapse" style="height: 0px;">
                   <div class="panel-body">
                     <ul id="up-ammo-stock" class="list-group"></ul>
@@ -149,7 +153,7 @@
             </div>
             <div class="panel panel-default">
               <div class="panel-heading">
-                <h4 class="panel-title light center"><a data-toggle="collapse" data-parent="#accordion" data-target="#up-reloadtime-panel" href="javascript:" class="collapsed">Reload time upgrades <span id="up-reloadtime-stats"></span><li class="fa fa-caret-down"></li></a></h4>
+                <h4 class="panel-title light center"><a data-toggle="collapse" data-parent="#accordion" data-target="#up-reloadtime-panel" href="javascript:" class="collapsed">装弹时间升级 <span id="up-reloadtime-stats"></span><li class="fa fa-caret-down"></li></a></h4>
                 <div id="up-reloadtime-panel" class="panel-collapse collapse" style="height: 0px;">
                   <div class="panel-body">
                     <ul id="up-reload-time" class="list-group"></ul>
@@ -159,7 +163,7 @@
             </div>
             <div class="panel panel-default">
               <div class="panel-heading">
-                <h4 class="panel-title light center"><a data-toggle="collapse" data-parent="#accordion" data-target="#up-weedprice-panel" href="javascript:" class="collapsed">Weed price upgrades <span id="up-weedprice-stats"></span><li class="fa fa-caret-down"></li></a></h4>
+                <h4 class="panel-title light center"><a data-toggle="collapse" data-parent="#accordion" data-target="#up-weedprice-panel" href="javascript:" class="collapsed">大麻价格升级 <span id="up-weedprice-stats"></span><li class="fa fa-caret-down"></li></a></h4>
                 <div id="up-weedprice-panel" class="panel-collapse collapse" style="height: 0px;">
                   <div class="panel-body">
                     <ul id="up-weed-price" class="list-group"></ul>
@@ -169,7 +173,7 @@
             </div>
             <div class="panel panel-default">
               <div class="panel-heading">
-                <h4 class="panel-title light center"><a data-toggle="collapse" data-parent="#accordion" data-target="#up-methprice-panel" href="javascript:" class="collapsed">Meth price upgrades <span id="up-methprice-stats"></span><li class="fa fa-caret-down"></li></a></h4>
+                <h4 class="panel-title light center"><a data-toggle="collapse" data-parent="#accordion" data-target="#up-methprice-panel" href="javascript:" class="collapsed">冰毒价格升级 <span id="up-methprice-stats"></span><li class="fa fa-caret-down"></li></a></h4>
                 <div id="up-methprice-panel" class="panel-collapse collapse" style="height: 0px;">
                   <div class="panel-body">
                     <ul id="up-meth-price" class="list-group"></ul>
@@ -179,7 +183,7 @@
             </div>
             <div class="panel panel-default">
               <div class="panel-heading">
-                <h4 class="panel-title light center"><a data-toggle="collapse" data-parent="#accordion" data-target="#up-cocaineprice-panel" href="javascript:" class="collapsed">Cocaine price upgrades <span id="up-cocaineprice-stats"></span><li class="fa fa-caret-down"></li></a></h4>
+                <h4 class="panel-title light center"><a data-toggle="collapse" data-parent="#accordion" data-target="#up-cocaineprice-panel" href="javascript:" class="collapsed">可卡因价格升级 <span id="up-cocaineprice-stats"></span><li class="fa fa-caret-down"></li></a></h4>
                 <div id="up-cocaineprice-panel" class="panel-collapse collapse" style="height: 0px;">
                   <div class="panel-body">
                     <ul id="up-cocaine-price" class="list-group"></ul>
@@ -191,7 +195,7 @@
           <div class="tab-pane fade" id="tab-builds">
             <div class="panel panel-default">
               <div class="panel-heading">
-                <h4 class="panel-title light center"><a data-toggle="collapse" data-parent="#accordion" data-target="#builds-weed-panel" href="javascript:" class="collapsed">Weed Builds <span id="builds-weedstats"></span><li class="fa fa-caret-down"></li></a></h4>
+                <h4 class="panel-title light center"><a data-toggle="collapse" data-parent="#accordion" data-target="#builds-weed-panel" href="javascript:" class="collapsed">大麻建筑 <span id="builds-weedstats"></span><li class="fa fa-caret-down"></li></a></h4>
                 <div id="builds-weed-panel" class="panel-collapse collapse" style="height: 0px;">
                   <div class="panel-body">
                     <ul id="builds-weed" class="list-group"></ul>
@@ -201,7 +205,7 @@
             </div>
             <div class="panel panel-default">
               <div class="panel-heading">
-                <h4 class="panel-title light center"><a data-toggle="collapse" data-parent="#accordion" data-target="#dealers-weed-panel" href="javascript:" class="collapsed">Weed Dealers <span id="dealers-weedstats"></span><li class="fa fa-caret-down"></li></a></h4>
+                <h4 class="panel-title light center"><a data-toggle="collapse" data-parent="#accordion" data-target="#dealers-weed-panel" href="javascript:" class="collapsed">大麻商人 <span id="dealers-weedstats"></span><li class="fa fa-caret-down"></li></a></h4>
                 <div id="dealers-weed-panel" class="panel-collapse collapse" style="height: 0px;">
                   <div class="panel-body">
                     <ul id="dealers-weed" class="list-group"></ul>
@@ -211,7 +215,7 @@
             </div>
             <div class="panel panel-default">
               <div class="panel-heading">
-                <h4 class="panel-title light center"><a data-toggle="collapse" data-parent="#accordion" data-target="#builds-meth-panel" href="javascript:" class="collapsed">Meth Builds <span id="builds-methstats"></span><li class="fa fa-caret-down"></li></a></h4>
+                <h4 class="panel-title light center"><a data-toggle="collapse" data-parent="#accordion" data-target="#builds-meth-panel" href="javascript:" class="collapsed">冰毒建筑 <span id="builds-methstats"></span><li class="fa fa-caret-down"></li></a></h4>
                 <div id="builds-meth-panel" class="panel-collapse collapse" style="height: 0px;">
                   <div class="panel-body">
                     <ul id="builds-meth" class="list-group"></ul>
@@ -221,7 +225,7 @@
             </div>
             <div class="panel panel-default">
               <div class="panel-heading">
-                <h4 class="panel-title light center"><a data-toggle="collapse" data-parent="#accordion" data-target="#dealers-meth-panel" href="javascript:" class="collapsed">Meth Dealers <span id="dealers-methstats"></span><li class="fa fa-caret-down"></li></a></h4>
+                <h4 class="panel-title light center"><a data-toggle="collapse" data-parent="#accordion" data-target="#dealers-meth-panel" href="javascript:" class="collapsed">冰毒商人 <span id="dealers-methstats"></span><li class="fa fa-caret-down"></li></a></h4>
                 <div id="dealers-meth-panel" class="panel-collapse collapse" style="height: 0px;">
                   <div class="panel-body">
                     <ul id="dealers-meth" class="list-group"></ul>
@@ -231,7 +235,7 @@
             </div>
             <div class="panel panel-default">
               <div class="panel-heading">
-                <h4 class="panel-title light center"><a data-toggle="collapse" data-parent="#accordion" data-target="#builds-cocaine-panel" href="javascript:" class="collapsed">Cocaine Builds <span id="builds-cocainestats"></span><li class="fa fa-caret-down"></li></a></h4>
+                <h4 class="panel-title light center"><a data-toggle="collapse" data-parent="#accordion" data-target="#builds-cocaine-panel" href="javascript:" class="collapsed">可卡因建筑 <span id="builds-cocainestats"></span><li class="fa fa-caret-down"></li></a></h4>
                 <div id="builds-cocaine-panel" class="panel-collapse collapse" style="height: 0px;">
                   <div class="panel-body">
                     <ul id="builds-cocaine" class="list-group"></ul>
@@ -241,7 +245,7 @@
             </div>
             <div class="panel panel-default">
               <div class="panel-heading">
-                <h4 class="panel-title light center"><a data-toggle="collapse" data-parent="#accordion" data-target="#dealers-cocaine-panel" href="javascript:" class="collapsed">Cocaine Dealers <span id="dealers-cocainestats"></span><li class="fa fa-caret-down"></li></a></h4>
+                <h4 class="panel-title light center"><a data-toggle="collapse" data-parent="#accordion" data-target="#dealers-cocaine-panel" href="javascript:" class="collapsed">可卡因商人 <span id="dealers-cocainestats"></span><li class="fa fa-caret-down"></li></a></h4>
                 <div id="dealers-cocaine-panel" class="panel-collapse collapse" style="height: 0px;">
                   <div class="panel-body">
                     <ul id="dealers-cocaine" class="list-group"></ul>
@@ -315,12 +319,12 @@
           </div>
           <div class="tab-pane fade" id="tab-prestige">
             <div class="well">
-              <p class="tiny-font center">Be careful when buying prestige-upgrades!<br>
-              Note : you keep prestige-upgrades when you soft-reset.</p>
+              <p class="tiny-font center">购买声望升级时要小心！<br>
+              注意：当您软复位时，将保留您的声望升级。</p>
             </div>
             <div class="panel panel-default">
               <div class="panel-heading">
-                <h4 class="panel-title light center"><a data-toggle="collapse" data-parent="#accordion" data-target="#prestige-drugs-panel" href="javascript:" class="collapsed">Prestige drugs prices upgrades <span id="pup-drugs-stats"></span><li class="fa fa-caret-down"></li></a></h4>
+                <h4 class="panel-title light center"><a data-toggle="collapse" data-parent="#accordion" data-target="#prestige-drugs-panel" href="javascript:" class="collapsed">声望毒品奖励升级 <span id="pup-drugs-stats"></span><li class="fa fa-caret-down"></li></a></h4>
                 <div id="prestige-drugs-panel" class="panel-collapse collapse" style="height: 0px;">
                   <div class="panel-body">
                     <ul id="prestige-upgrades" class="list-group"></ul>
@@ -330,7 +334,7 @@
             </div>
             <div class="panel panel-default">
               <div class="panel-heading">
-                <h4 class="panel-title light center"><a data-toggle="collapse" data-parent="#accordion" data-target="#prestige-shoot-panel" href="javascript:" class="collapsed">Prestige shoot reward upgrades <span id="pup-shootreward-stats"></span><li class="fa fa-caret-down"></li></a></h4>
+                <h4 class="panel-title light center"><a data-toggle="collapse" data-parent="#accordion" data-target="#prestige-shoot-panel" href="javascript:" class="collapsed">声望射击奖励升级 <span id="pup-shootreward-stats"></span><li class="fa fa-caret-down"></li></a></h4>
                 <div id="prestige-shoot-panel" class="panel-collapse collapse" style="height: 0px;">
                   <div class="panel-body">
                     <ul id="prestige-shoot" class="list-group"></ul>
@@ -340,7 +344,7 @@
             </div>
             <div class="panel panel-default">
               <div class="panel-heading">
-                <h4 class="panel-title light center"><a data-toggle="collapse" data-parent="#accordion" data-target="#prestige-auto-panel" href="javascript:" class="collapsed">Auto-shoot/Reload upgrades <li class="fa fa-caret-down"></li></a></h4>
+                <h4 class="panel-title light center"><a data-toggle="collapse" data-parent="#accordion" data-target="#prestige-auto-panel" href="javascript:" class="collapsed">自动射击/装弹 升级 <li class="fa fa-caret-down"></li></a></h4>
                 <div id="prestige-auto-panel" class="panel-collapse collapse" style="height: 0px;">
                   <div class="panel-body">
                     <ul id="prestige-shooting" class="list-group"></ul>
@@ -351,11 +355,11 @@
             </div>
           </div>
           <div class="tab-pane fade" id="tab-ach">
-            <div class="well"><div class="checkbox tiny-font center"><label><input type="checkbox" id="showAchOwned" onclick="Achievement.hide()"> Show achievements owned</label></div></div>
+            <div class="well"><div class="checkbox tiny-font center"><label><input type="checkbox" id="showAchOwned" onclick="Achievement.hide()"> 显示已获得的成就</label></div></div>
 
             <div class="panel panel-default">
               <div class="panel-heading">
-                <h4 class="panel-title light center"><a data-toggle="collapse" data-parent="#accordion" data-target="#ach-totalmoney-panel" href="javascript:" class="collapsed">Total-money achievements <span id="ach-totalmoney-stats"></span><li class="fa fa-caret-down"></li></a></h4>
+                <h4 class="panel-title light center"><a data-toggle="collapse" data-parent="#accordion" data-target="#ach-totalmoney-panel" href="javascript:" class="collapsed">总金钱成就 <span id="ach-totalmoney-stats"></span><li class="fa fa-caret-down"></li></a></h4>
                 <div id="ach-totalmoney-panel" class="panel-collapse collapse" style="height: 0px;">
                   <div class="panel-body">
                     <ul id="ach-totalmoney" class="list-group"></ul>
@@ -365,7 +369,7 @@
             </div>
             <div class="panel panel-default">
               <div class="panel-heading">
-                <h4 class="panel-title light center"><a data-toggle="collapse" data-parent="#accordion" data-target="#ach-experience-panel" href="javascript:" class="collapsed">Experience achievements <span id="ach-experience-stats"></span><li class="fa fa-caret-down"></li></a></h4>
+                <h4 class="panel-title light center"><a data-toggle="collapse" data-parent="#accordion" data-target="#ach-experience-panel" href="javascript:" class="collapsed">经验成就 <span id="ach-experience-stats"></span><li class="fa fa-caret-down"></li></a></h4>
                 <div id="ach-experience-panel" class="panel-collapse collapse" style="height: 0px;">
                   <div class="panel-body">
                     <ul id="ach-experience" class="list-group"></ul>
@@ -375,7 +379,7 @@
             </div>
             <div class="panel panel-default">
               <div class="panel-heading">
-                <h4 class="panel-title light center"><a data-toggle="collapse" data-parent="#accordion" data-target="#ach-shoot-panel" href="javascript:" class="collapsed">Shoot achievements <span id="ach-shoot-stats"></span><li class="fa fa-caret-down"></li></a></h4>
+                <h4 class="panel-title light center"><a data-toggle="collapse" data-parent="#accordion" data-target="#ach-shoot-panel" href="javascript:" class="collapsed">射击成就<span id="ach-shoot-stats"></span><li class="fa fa-caret-down"></li></a></h4>
                 <div id="ach-shoot-panel" class="panel-collapse collapse" style="height: 0px;">
                   <div class="panel-body">
                     <ul id="ach-shoot" class="list-group"></ul>
@@ -385,7 +389,7 @@
             </div>
             <div class="panel panel-default">
               <div class="panel-heading">
-                <h4 class="panel-title light center"><a data-toggle="collapse" data-parent="#accordion" data-target="#ach-reload-panel" href="javascript:" class="collapsed">Reload achievements <span id="ach-reload-stats"></span><li class="fa fa-caret-down"></li></a></h4>
+                <h4 class="panel-title light center"><a data-toggle="collapse" data-parent="#accordion" data-target="#ach-reload-panel" href="javascript:" class="collapsed">装弹成就 <span id="ach-reload-stats"></span><li class="fa fa-caret-down"></li></a></h4>
                 <div id="ach-reload-panel" class="panel-collapse collapse" style="height: 0px;">
                   <div class="panel-body">
                     <ul id="ach-reload" class="list-group"></ul>
@@ -397,31 +401,31 @@
           <div class="tab-pane fade" id="tab-options">
             <div class="well">
               <div class="row">
-                <div class="col-md-4 col-xs-4"><a onclick="saveData();" class="btn btn-success btn-sm center-btn">Save</a></div>
-                <div class="col-md-4 col-xs-4"><a onclick="hardReset();" class="btn btn-danger btn-sm center-btn">Hard-reset</a></div>
-                <div class="col-md-4 col-xs-4"><a onclick="softReset();" class="btn btn-warning btn-sm center-btn">Soft-reset</a></div>
+                <div class="col-md-4 col-xs-4"><a onclick="saveData();" class="btn btn-success btn-sm center-btn">保存</a></div>
+                <div class="col-md-4 col-xs-4"><a onclick="hardReset();" class="btn btn-danger btn-sm center-btn">硬复位</a></div>
+                <div class="col-md-4 col-xs-4"><a onclick="softReset();" class="btn btn-warning btn-sm center-btn">软复位</a></div>
               </div>
               <br>
               <div class="row">
-                <div class="col-md-6 col-xs-6"><a onclick="exportSave();" class="btn btn-success btn-sm center-btn">Export-save</a></div>
-                <div class="col-md-6 col-xs-6"><a onclick="importSave();" class="btn btn-success btn-sm center-btn">Import-save</a></div>
+                <div class="col-md-6 col-xs-6"><a onclick="exportSave();" class="btn btn-success btn-sm center-btn">导出存档</a></div>
+                <div class="col-md-6 col-xs-6"><a onclick="importSave();" class="btn btn-success btn-sm center-btn">导入存档</a></div>
               </div>
               <br>
               <div class="row">
                 <div class="col-md-6">
                   <div class="form-group">
-                    <input class="form-control" id="exportSaveField" type="text" value='Exported-save will be here'>
+                    <input class="form-control" id="exportSaveField" type="text" value='导出的游戏存档将会出现在这里'>
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="form-group">
-                    <input class="form-control" id="importSaveField" type="text" value='Paste your save here'>
+                    <input class="form-control" id="importSaveField" type="text" value='请在这里粘贴您要导入的游戏存档'>
                   </div>
                 </div>
               </div><br>
               <div class="row">
-                <div class="col-md-12"><p class="justify tiny-font light">Game is currently running at : <span id="options-currentFps"></span>You may have to reduce fps if the game is slowing down your computer.<br>
-                <b>Warning : this doesn't affect the general gameplay, you will not produce more or less drugs, etc.</b></p></div>
+                <div class="col-md-12"><p class="justify tiny-font light">游戏当前运行: <span id="options-currentFps"></span>如果游戏运行让你的电脑卡顿你可以降低Fps的值。<br>
+                <b>提示：这不会影响其他游戏的运行，也不会产生其它负面效果等等。</b></p></div>
               </div>
               <br>
               <div class="row">
@@ -431,9 +435,9 @@
           </div>
           <div class="tab-pane fade" id="tab-help">
             <div class="well">
-              <p class="lead underline text-center">How to play?</p>
-              <p class="tiny-font justify"><b>Welcome to Blackmarket!</b><br>
-              Blackmarket is an incremental game where you <b>manage a Drug Empire</b>! In the beginning, you're a poor Street Rat with a gun you stole from Uncle Ronny. To earn your first few <b>$$$ bills</b>, you have to shoot! You can buy <b>upgrades</b> to improve your operations and boost your cash flow.<br>
+              <p class="lead underline text-center">这个游戏怎么玩?</p>
+              <p class="tiny-font justify"><b>欢迎来到黑市!</b><br>
+              黑市是一个增量游戏，在这里您将<b>管理一个毒品帝国</ b>！ 一开始，你是一个可怜的街头老鼠，你只有一把从罗恩叔叔那里偷走的枪。 要赚取您的前几张<b> $$$帐单</ b>，您必须射击！ 你可以购买<b>升级</ b>以提高您的操作和提高你的现金流。<br>
               Once you have some cash to spend, you can invest in some <b>"buildings"</b> that will produce "candy" (We mean drugs, LOTS of drugs!). Buildings produce a specific amount of drugs which you can then sell for sweet $Cash Money$! .<br>
               Blackmarket has three primary drugs (<b>weed, meth and cocaine</b>). Each drug has its own line of buildings and dealers. Once you have a few buildings, you can hire <b>dealers</b>. Dealers sell an amount of <b>their respective drug every second</b>!<br>
               It's as simple as that, the business of drugs!<br>
@@ -492,41 +496,41 @@
                 - Some back end improvement.
               </p>
 
-              <p class="lead center underline">v1.06 (04/24/2015) : achievements and game balancing.</p>
+              <p class="lead center underline">v1.06 (04/24/2015) : 成就和游戏平衡性.</p>
               <p class="justify tiny-font">
-                - Added achievements! Actually, you don't gain any bonuses from them, but it's planned, to gain a certain % from these achievements!<br>
-                - Meth and cocaine buildings/dealers have been boosted, they produces/sell more.<br>
-                - Weed price is nerfed, meth and cocaine is a bit boosted.<br>
-                - Some bugs fixed.<br>
-                - Some back end improvement.
+               - 增加了成就页面! 但是，你不会从中获得奖励，这是新的内容，让你不断的挑战更高的成就!<br>
+                - 冰毒和可卡因的建筑及商人有所提升，产量更高，出售更多.<br>
+                - 大麻的价格降低，冰毒和可卡因的稍微提高.<br>
+                - 部分Bug修复.<br>
+                - 游戏性能增强.
               </p>
 
-              <p class="lead center underline">v1.05 (04/23/2015) : prestige-upgrades changed!</p>
+             <p class="lead center underline">v1.05 (04/23/2015) : 声望升级改动!</p>
               <p class="justify tiny-font">
-                - Changed prestige-upgrades, now you keep prestige-upgrades when going to soft-reset!<br>
-                - Fixed some bugs with prestige-upgrades.<br>
-                - Numbers can go up to 10e153 (quinquagintillion).
+                - 声望的升级更改，当你执行软复位后能保留已升级的声望!<br>
+                -修复部分声望升级的Bug.<br>
+                - 数字能累计到 10e153 (quinquagintillion).
               </p>
 
-              <p class="lead center underline">v1.04 (04/22/2015) : small changes</p>
+              <p class="lead center underline">v1.04 (04/22/2015) : 部分小改动</p>
               <p class="justify tiny-font">
-                - Changed experience required for ranks! It should be easier now.<br>
-                - Added an option to hide/show upgrades owned!<br>
-                - Added auto-shooting/reloading. If you want to disable them, you must reload the page, sorry!<br>
-                - Changed builds/dealers prices.<br>
-                - Builds/dealers produces/sells a bit more.<br>
-                - Changed upgrades layout.<br>
-                - Fixed a bug with prestige-upgrades.<br>
-                - Experience formula have been a bit nerfed, it's now :<br>
+                - 改变了等级提升的经验需求，难度降低.<br>
+                - 增加了隐藏/打开已升级项目的选项框!<br>
+                - 增加了自动射击/装弹. 如果你想禁用，你只能刷新页面, sorry!<br>
+                - 改变了建筑/商人的价钱.<br>
+                - 建筑生产/商人出售稍微提高.<br>
+                - 改变了升级的布局.<br>
+                - 修复声望升级的Bug.<br>
+                - 经验的获得被削弱 :<br>
                 <span class="code">Math.floor(30 * Math.sqrt(totalMoney/1e7))</span>.<br>
               </p>
 
               <p class="lead center underline">v1.03 (04/21/2015) : new upgrades</p>
               <p class="justify tiny-font">
                 - Added new upgrades, changed prices of some of them.<br>
-                - Added new prestige-upgrades and changed their layout. New prestige upgrades make the shooting reward earn x % of your current $/sec.<br>
+                - Added new prestige-upgrades and changed their layout. New prestige upgrades make the shooting reward earn x % of your current $/秒.<br>
                 - Fixed a bug with the shooting reward.<br>
-                - Removed the g/sec in the navbar of each drug to make the game more user friendly interface on Kongregate.<br>
+                - Removed the g/秒 in the navbar of each drug to make the game more user friendly interface on Kongregate.<br>
                 - Fixed a bug with import/export and upgrades.<br>
                 - Added an alert when using Internet Explorer (Blackmarket doesn't work correctly with ANY versions of IE).<br>
                 - Some backends invisible changes.

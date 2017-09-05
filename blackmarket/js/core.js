@@ -3,9 +3,9 @@ var shootPercent; var shootPercentCash;
 var experienceSpent;
 var drugStock; var drugName; var drugPrice; var drugMultiplier; var drugPerSec;
 var drugInit = [
-    new Drug("Weed",        50),
-    new Drug("Meth",        750),
-    new Drug("Cocaine",     3500)
+    new Drug("大麻",        50),
+    new Drug("冰毒",        750),
+    new Drug("可卡因",     3500)
 ];
 
 var fps = 60; var interval = (1000 / fps); var init = false; var key = "BmInc-";
@@ -97,28 +97,28 @@ Init.update = function() {
             $("#factory-unlocked, #market-unlocked").css("display", "block");
         };
 
-        $("#navbar-money").html("$" + fix(money[0], "money") + " <small>($" + fix(moneyPerSec[0] + moneyPerSec[1] + moneyPerSec[2], "money") + "/sec)</small>");
-        $("#navbar-weed").html("Weed : " + fix(drugStock[0], "drug") + "g");
-        $("#navbar-meth").html("Meth : " + fix(drugStock[1], "drug") + "g");
-        $("#navbar-cocaine").html("Cocaine : " + fix(drugStock[2], "drug") + "g");
+        $("#navbar-money").html("$" + fix(money[0], "money") + " <small>($" + fix(moneyPerSec[0] + moneyPerSec[1] + moneyPerSec[2], "money") + "/秒)</small>");
+        $("#navbar-weed").html("大麻 : " + fix(drugStock[0], "drug") + "g");
+        $("#navbar-meth").html("冰毒 : " + fix(drugStock[1], "drug") + "g");
+        $("#navbar-cocaine").html("可卡因 : " + fix(drugStock[2], "drug") + "g");
         
-        $("#action-shoot").html("+ $" + fix(getShootReward(), "money") + "/shoot<br>" + fix((shoot[3] / 1000), "time") + " sec/shoot");
-        $("#action-reload").html(shoot[0] + "/" + shoot[2] + " ammo<br>" + fix((shoot[4] / 1000), "time") + " sec/reload");
+        $("#action-shoot").html("+ $" + fix(getShootReward(), "money") + "/射击<br>" + fix((shoot[3] / 1000), "time") + " sec/射击");
+        $("#action-reload").html(shoot[0] + "/" + shoot[2] + " ammo<br>" + fix((shoot[4] / 1000), "time") + " sec/装弹");
         
-        $("#stats-money").html("Money : <b>$" + fix(money[0], "money") + "</b><br>Total money : <b>$" + fix(money[1], "money") + "</b><br>Money per sec : <b>$" + fix(moneyPerSec[0] + moneyPerSec[1] + moneyPerSec[2], "money") + "/sec</b>");
-        $("#stats-ammo").html("Ammo : <b>" + shoot[0] + "/" + shoot[2] + "</b><br>Total shots : <b>" + fix(shoot[5], "money") + "</b><br>Total reloads : <b>" + fix(shoot[6], "money") + '</b><br>Shoot earn <b>' + shootPercent + '% of your total $/sec</b>');
-        $("#stats-weed").html("Weed stock : <b>" + fix(drugStock[0], "drug") + "g</b> (" + fix(drugPerSec[0], "drug") + "g/sec)<br>Weed selling : <b>" + fix(drugNetPerSec[0], "drug") + "g/sec</b><br>Weed price : <b>" + fix(getDrugPrice(0), "drug") + "$/g</b><br>Weed multiplier : <b>x" + fix(drugMultiplier[0], "multiplier") + '</b>');
-        $("#stats-meth").html("Meth stock : <b>" + fix(drugStock[1], "drug") + "g</b> (" + fix(drugPerSec[1], "drug") + "g/sec)<br>Meth selling : <b>" + fix(drugNetPerSec[1], "drug") + "g/sec</b><br>Meth price : <b>" + fix(getDrugPrice(1), "drug") + "$/g</b><br>Meth multiplier : <b>x" + fix(drugMultiplier[1], "multiplier") + '</b>');
-        $("#stats-cocaine").html("Cocaine stock : <b>" + fix(drugStock[2], "drug") + "g</b> (" + fix(drugPerSec[2], "drug") + "g/sec)<br>Cocaine selling : <b>" + fix(drugNetPerSec[2], "drug") + "g/sec</b><br>Cocaine price : <b>" + fix(getDrugPrice(2), "drug") + "$/g</b><br>Cocaine multiplier : <b>x" + fix(drugMultiplier[2], "multiplier") + '</b>');
-        $("#stats-weedcash").html("Money from weed : <b>$" + fix(moneyPerSec[0], "money") + "/sec</b><br>");
-        $("#stats-methcash").html("Money from meth : <b>$" + fix(moneyPerSec[1], "money") + "/sec</b><br>");
-        $("#stats-cocainecash").html("Money from cocaine : <b>$" + fix(moneyPerSec[2], "money") + "/sec</b><br>");
-        $("#stats-totalmoneypersec").html("Total money per sec : <b>$" + fix(moneyPerSec[0] + moneyPerSec[1] + moneyPerSec[2], "money") + "/sec</b>");
-        $("#stats-experience").html("Experience : <b>" + fix(prestige[0], "prestige") + "</b><br>Experience on reset : <b>" + fix(prestige[1], "prestige") + "</b><br>Experience spent : <b>" + fix(experienceSpent, "prestige") + "</b>");
-        $("#stats-prestige").html("Prestige rank : <b>" + prestige[3] + "</b><br>Prestige multiplier : <b>x" + fix(prestige[2], "multiplier") + "</b>");
+        $("#stats-money").html("金钱 : <b>$" + fix(money[0], "money") + "</b><br>总金钱 : <b>$" + fix(money[1], "money") + "</b><br>每秒金钱 : <b>$" + fix(moneyPerSec[0] + moneyPerSec[1] + moneyPerSec[2], "money") + "/秒</b>");
+        $("#stats-ammo").html("弹夹 : <b>" + shoot[0] + "/" + shoot[2] + "</b><br>总射击数 : <b>" + fix(shoot[5], "money") + "</b><br>总装弹数 : <b>" + fix(shoot[6], "money") + '</b><br>射击获得 <b>' + shootPercent + '% 总金钱数 $/秒</b>');
+        $("#stats-weed").html("大麻库存 : <b>" + fix(drugStock[0], "drug") + "g</b> (" + fix(drugPerSec[0], "drug") + "克/秒)<br>大麻出售 : <b>" + fix(drugNetPerSec[0], "drug") + "克/秒</b><br>大麻价格 : <b>" + fix(getDrugPrice(0), "drug") + "$/g</b><br>大麻倍率 : <b>x" + fix(drugMultiplier[0], "multiplier") + '</b>');
+        $("#stats-meth").html("冰毒库存 : <b>" + fix(drugStock[1], "drug") + "g</b> (" + fix(drugPerSec[1], "drug") + "克/秒)<br>冰毒出售 : <b>" + fix(drugNetPerSec[1], "drug") + "克/秒</b><br>冰毒价格 : <b>" + fix(getDrugPrice(1), "drug") + "$/g</b><br>冰毒倍率 : <b>x" + fix(drugMultiplier[1], "multiplier") + '</b>');
+        $("#stats-cocaine").html("可卡因库存 : <b>" + fix(drugStock[2], "drug") + "g</b> (" + fix(drugPerSec[2], "drug") + "克/秒)<br>可卡因出售 : <b>" + fix(drugNetPerSec[2], "drug") + "克/秒</b><br>可卡因价格 : <b>" + fix(getDrugPrice(2), "drug") + "$/g</b><br>可卡因倍率 : <b>x" + fix(drugMultiplier[2], "multiplier") + '</b>');
+        $("#stats-weedcash").html("大麻赚钱数 : <b>$" + fix(moneyPerSec[0], "money") + "/秒</b><br>");
+        $("#stats-methcash").html("冰毒赚钱数 : <b>$" + fix(moneyPerSec[1], "money") + "/秒</b><br>");
+        $("#stats-cocainecash").html("可卡因赚钱数 : <b>$" + fix(moneyPerSec[2], "money") + "/秒</b><br>");
+        $("#stats-totalmoneypersec").html("每秒总金钱 : <b>$" + fix(moneyPerSec[0] + moneyPerSec[1] + moneyPerSec[2], "money") + "/秒</b>");
+        $("#stats-experience").html("经验 : <b>" + fix(prestige[0], "prestige") + "</b><br>重置经验 : <b>" + fix(prestige[1], "prestige") + "</b><br>花费经验 : <b>" + fix(experienceSpent, "prestige") + "</b>");
+        $("#stats-prestige").html("声望等级 : <b>" + prestige[3] + "</b><br>声望倍率 : <b>x" + fix(prestige[2], "multiplier") + "</b>");
         
-        $("#options-version").html("Current version : " + version);
-        $("#options-currentFps").html(inputValue + " frames per second. ");
+        $("#options-version").html("当前版本 : " + version);
+        $("#options-currentFps").html(inputValue + " 帧每秒. ");
 
         $("#builds-weedstats").html("(" + weedBuildsOwned[0] + "/" + weedBuildsOwned[1] + "/" + weedBuildsOwned[2] + "/" + weedBuildsOwned[3] + ") ");
         $("#builds-methstats").html("(" + methBuildsOwned[0] + "/" + methBuildsOwned[1] + "/" + methBuildsOwned[2] + "/" + methBuildsOwned[3] + ") ");
