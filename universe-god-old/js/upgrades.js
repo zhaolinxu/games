@@ -33,8 +33,8 @@ game.upgrades.init = function() {
 	for (var i = 0; i < g.u.list.length; i++) {
 		g.u.owned.push(false);
 		$("#upgrades-panelbody").append('<div id="upgrades-row-' + i + '" class="row bottom-spacer">'
-			+ '<div class="col-md-8"><p class="no-margin">' + g.u.list[i].name + " : " + g.u.list[i].desc + "<br>Cost " + fix(g.u.list[i].price, 0) + " " + g.u.list[i].priceName.toLowerCase() + '</p>' + '</div>'
-			+ '<div class="col-md-4"><a id="upgrades-btn-' + i + '" type="button" class="btn btn-primary btn-block" onclick="g.u.buy(' + i + ')">Buy upgrade</a></div>'
+			+ '<div class="col-md-8"><p class="no-margin">' + g.u.list[i].name + " : " + g.u.list[i].desc + "<br>花费 " + fix(g.u.list[i].price, 0) + " " + g.u.list[i].priceName.toLowerCase() + '</p>' + '</div>'
+			+ '<div class="col-md-4"><a id="upgrades-btn-' + i + '" type="button" class="btn btn-primary btn-block" onclick="g.u.buy(' + i + ')">购买升级</a></div>'
 			+ '</div>');
 	};
 };
@@ -72,13 +72,13 @@ game.upgrades.checkSave = function() {
 
 g.u.owned = [];
 g.u.list = [
-	new g.u.create("Hydrogen I",	"Hydrogen/click x2",	10,		'Hydrogen',		'owned[0]',		'perClick[0]',		'*2'),
-	new g.u.create("Hydrogen II",	"Hydrogen/click x2",	75,		'Hydrogen',		'owned[0]',		'perClick[0]',		'*2'),
-	new g.u.create("Hydrogen III",	"Hydrogen/click x1.5",	1000,	'Hydrogen',		'owned[0]',		'perClick[0]',		'*1.5'),
-	new g.u.create("Oxygen I",		"Oxygen/click x2",		10,		'Oxygen',		'owned[1]',		'perClick[1]',		'*2'),
-	new g.u.create("Oxygen II",		"Oxygen/click x2",		75,		'Oxygen',		'owned[1]',		'perClick[1]',		'*2'),
-	new g.u.create("Oxygen III",	"Oxygen/click x1.5",	1000,	'Oxygen',		'owned[1]',		'perClick[1]',		'*1.5'),
-	new g.u.create("Helium I",		"Helium/click x2",		10,		'Helium',		'owned[2]',		'perClick[2]',		'*2'),
-	new g.u.create("Helium II",		"Helium/click x2",		75,		'Helium',		'owned[2]',		'perClick[2]',		'*2'),
-	new g.u.create("Helium III",	"Helium/click x1.5",	1000,	'Helium',		'owned[2]',		'perClick[2]',		'*1.5')
+	new g.u.create("氢 I",	"氢/每次点击 x2",	10,		'氢',		'owned[0]',		'perClick[0]',		'*2'),
+	new g.u.create("氢 II",	"氢/每次点击 x2",	75,		'氢',		'owned[0]',		'perClick[0]',		'*2'),
+	new g.u.create("氢 III",	"氢/每次点击 x1.5",	1000,	'氢',		'owned[0]',		'perClick[0]',		'*1.5'),
+	new g.u.create("氧 I",		"氧/每次点击 x2",		10,		'氧',		'owned[1]',		'perClick[1]',		'*2'),
+	new g.u.create("氧 II",		"氧/每次点击 x2",		75,		'氧',		'owned[1]',		'perClick[1]',		'*2'),
+	new g.u.create("氧 III",	"氧/每次点击 x1.5",	1000,	'氧',		'owned[1]',		'perClick[1]',		'*1.5'),
+	new g.u.create("氦 I",		"氦/每次点击 x2",		10,		'氦',		'owned[2]',		'perClick[2]',		'*2'),
+	new g.u.create("氦 II",		"氦/每次点击 x2",		75,		'氦',		'owned[2]',		'perClick[2]',		'*2'),
+	new g.u.create("氦 III",	"氦/每次点击 x1.5",	1000,	'氦',		'owned[2]',		'perClick[2]',		'*1.5')
 ];

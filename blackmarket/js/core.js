@@ -102,14 +102,14 @@ Init.update = function() {
         $("#navbar-meth").html("冰毒 : " + fix(drugStock[1], "drug") + "g");
         $("#navbar-cocaine").html("可卡因 : " + fix(drugStock[2], "drug") + "g");
         
-        $("#action-shoot").html("+ $" + fix(getShootReward(), "money") + "/射击<br>" + fix((shoot[3] / 1000), "time") + " sec/射击");
-        $("#action-reload").html(shoot[0] + "/" + shoot[2] + " ammo<br>" + fix((shoot[4] / 1000), "time") + " sec/装弹");
+        $("#action-shoot").html("+ $" + fix(getShootReward(), "money") + " /射击<br>" + fix((shoot[3] / 1000), "time") + " 秒/射击");
+        $("#action-reload").html(shoot[0] + "/" + shoot[2] + " 弹夹<br>" + fix((shoot[4] / 1000), "time") + " 秒/装弹");
         
         $("#stats-money").html("金钱 : <b>$" + fix(money[0], "money") + "</b><br>总金钱 : <b>$" + fix(money[1], "money") + "</b><br>每秒金钱 : <b>$" + fix(moneyPerSec[0] + moneyPerSec[1] + moneyPerSec[2], "money") + "/秒</b>");
         $("#stats-ammo").html("弹夹 : <b>" + shoot[0] + "/" + shoot[2] + "</b><br>总射击数 : <b>" + fix(shoot[5], "money") + "</b><br>总装弹数 : <b>" + fix(shoot[6], "money") + '</b><br>射击获得 <b>' + shootPercent + '% 总金钱数 $/秒</b>');
-        $("#stats-weed").html("大麻库存 : <b>" + fix(drugStock[0], "drug") + "g</b> (" + fix(drugPerSec[0], "drug") + "克/秒)<br>大麻出售 : <b>" + fix(drugNetPerSec[0], "drug") + "克/秒</b><br>大麻价格 : <b>" + fix(getDrugPrice(0), "drug") + "$/g</b><br>大麻倍率 : <b>x" + fix(drugMultiplier[0], "multiplier") + '</b>');
-        $("#stats-meth").html("冰毒库存 : <b>" + fix(drugStock[1], "drug") + "g</b> (" + fix(drugPerSec[1], "drug") + "克/秒)<br>冰毒出售 : <b>" + fix(drugNetPerSec[1], "drug") + "克/秒</b><br>冰毒价格 : <b>" + fix(getDrugPrice(1), "drug") + "$/g</b><br>冰毒倍率 : <b>x" + fix(drugMultiplier[1], "multiplier") + '</b>');
-        $("#stats-cocaine").html("可卡因库存 : <b>" + fix(drugStock[2], "drug") + "g</b> (" + fix(drugPerSec[2], "drug") + "克/秒)<br>可卡因出售 : <b>" + fix(drugNetPerSec[2], "drug") + "克/秒</b><br>可卡因价格 : <b>" + fix(getDrugPrice(2), "drug") + "$/g</b><br>可卡因倍率 : <b>x" + fix(drugMultiplier[2], "multiplier") + '</b>');
+        $("#stats-weed").html("大麻库存 : <b>" + fix(drugStock[0], "drug") + "g</b> (" + fix(drugPerSec[0], "drug") + "克/秒)<br>大麻出售 : <b>" + fix(drugNetPerSec[0], "drug") + "克/秒</b><br>大麻价格 : <b>" + fix(getDrugPrice(0), "drug") + "$/克</b><br>大麻倍率 : <b>x" + fix(drugMultiplier[0], "multiplier") + '</b>');
+        $("#stats-meth").html("冰毒库存 : <b>" + fix(drugStock[1], "drug") + "g</b> (" + fix(drugPerSec[1], "drug") + "克/秒)<br>冰毒出售 : <b>" + fix(drugNetPerSec[1], "drug") + "克/秒</b><br>冰毒价格 : <b>" + fix(getDrugPrice(1), "drug") + "$/克</b><br>冰毒倍率 : <b>x" + fix(drugMultiplier[1], "multiplier") + '</b>');
+        $("#stats-cocaine").html("可卡因库存 : <b>" + fix(drugStock[2], "drug") + "g</b> (" + fix(drugPerSec[2], "drug") + "克/秒)<br>可卡因出售 : <b>" + fix(drugNetPerSec[2], "drug") + "克/秒</b><br>可卡因价格 : <b>" + fix(getDrugPrice(2), "drug") + "$/克</b><br>可卡因倍率 : <b>x" + fix(drugMultiplier[2], "multiplier") + '</b>');
         $("#stats-weedcash").html("大麻赚钱数 : <b>$" + fix(moneyPerSec[0], "money") + "/秒</b><br>");
         $("#stats-methcash").html("冰毒赚钱数 : <b>$" + fix(moneyPerSec[1], "money") + "/秒</b><br>");
         $("#stats-cocainecash").html("可卡因赚钱数 : <b>$" + fix(moneyPerSec[2], "money") + "/秒</b><br>");

@@ -16,10 +16,10 @@ game.builds.init = function() {
 		g.b.owned.push(0);
 		g.b.multiplier.push(1);
 		$("#builds-panelbody").append('<div id="builds-row-' + i + '" class="row bottom-spacer">'
-			+ '<div class="col-md-8"><p id="builds-infos-' + i + '" class="no-margin">' + g.b.list[i].name + " : " + g.b.list[i].reward + " " + g.b.list[i].rewardName.toLowerCase() + "/sec<br>"
-			+ g.b.owned[i] + " owned : " + h.buildReward(i) + " " + g.b.list[i].rewardName.toLowerCase() + "/sec"
+			+ '<div class="col-md-8"><p id="builds-infos-' + i + '" class="no-margin">' + g.b.list[i].name + " : " + g.b.list[i].reward + " " + g.b.list[i].rewardName.toLowerCase() + "/秒<br>"
+			+ g.b.owned[i] + " owned : " + h.buildReward(i) + " " + g.b.list[i].rewardName.toLowerCase() + "/秒"
 			+ "<br>Cost " + fix(h.buildPrice(i), 0) + " " + g.b.list[i].priceName.toLowerCase() + '</p></div>'
-			+ '<div class="col-md-4"><a id="builds-btn-' + i + '" type="button" class="btn btn-primary btn-block" onclick="g.b.buy(' + i + ')">Buy build</a></div>'
+			+ '<div class="col-md-4"><a id="builds-btn-' + i + '" type="button" class="btn btn-primary btn-block" onclick="g.b.buy(' + i + ')">购买建筑</a></div>'
 			+ '</div>');
 	};
 };
@@ -51,13 +51,13 @@ game.builds.checkSave = function() {
 };
 game.builds.update = function() {
 	for (var i = 0; i < g.b.list.length; i++) {
-		$("#builds-infos-" + i).html(g.b.list[i].name + " : " + fix(g.b.list[i].reward, 2) + " " + g.b.list[i].rewardName.toLowerCase() + "/sec<br>" + fix(g.b.owned[i], 0) + " owned : " + fix(h.buildReward(i), 2) + " " + g.b.list[i].rewardName.toLowerCase() + "/sec" + "<br>Cost " + fix(h.buildPrice(i), 0) + " " + g.b.list[i].priceName.toLowerCase())
+		$("#builds-infos-" + i).html(g.b.list[i].name + " : " + fix(g.b.list[i].reward, 2) + " " + g.b.list[i].rewardName.toLowerCase() + "/秒<br>" + fix(g.b.owned[i], 0) + " 拥有数量 : " + fix(h.buildReward(i), 2) + " " + g.b.list[i].rewardName.toLowerCase() + "/秒" + "<br>花费 " + fix(h.buildPrice(i), 0) + " " + g.b.list[i].priceName.toLowerCase())
 	};
 };
 
 g.b.list = [
-	new g.b.create("Hydrogen build",	"Create some hydrogen", 	25, 	'Hydrogen', 	1,		'Hydrogen',		1.15),
-	new g.b.create("Oxygen build",		"Create some oxygen",		25,		'Oxygen',		1,		'Oxygen',		1.15),
-	new g.b.create("Helium build",		"Create some helium",		25,		'Helium',		1,		'Helium',		1.15),
-	new g.b.create("Water generator",	"Generate some water",		1500,	'Hydrogen',		0.5,	'Water',		1.15)
+	new g.b.create("氢建筑",	"制造氢", 	25, 	'氢', 	1,		'氢',		1.15),
+	new g.b.create("氧建筑",		"制造氧",		25,		'氧',		1,		'氧',		1.15),
+	new g.b.create("氦建筑",		"制造氦",		25,		'氦',		1,		'氦',		1.15),
+	new g.b.create("生产水",	"制造水",		1500,	'氢',		0.5,	'水',		1.15)
 ];

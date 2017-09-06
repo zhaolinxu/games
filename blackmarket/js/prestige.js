@@ -1,23 +1,23 @@
 var prestigeRanks = [
-    new PrestigeRank("Street Rat I",				0,  25,         		2.22),
-    new PrestigeRank("Street Rat II",            	1,  100,        		4.44),
-    new PrestigeRank("Street Rat III",           	2,  400,        		6.66),
-    new PrestigeRank("Petty Thief I",         		3,  1000,       		8.88),
-    new PrestigeRank("Petty Thief II",				4,  2500,       		20.00),
-    new PrestigeRank("Petty Thief III",            	5,  10000,      		30.00),
-    new PrestigeRank("Dealer I",           			6,  25000,      		40.00),
-    new PrestigeRank("Dealer II",         			7,  50000,     			50.00),
-    new PrestigeRank("Dealer III",					8,  100000,     		75.00),
-    new PrestigeRank("Prospective Supplier",        9,  250000,    			100.00),
-    new PrestigeRank("Drug Supplier I",         	10, 1000000,			125.00),
-    new PrestigeRank("Drug Supplier II",			11, 5000000,			150.00),
-    new PrestigeRank("Drug Supplier III",			12, 17500000, 			200.00),
-    new PrestigeRank("Drug Advisor",  				13, 50000000,   		300.00),
-    new PrestigeRank("Gang Under-boss",  			14, 100000000,  		400.00),
-    new PrestigeRank("Gang Leader",					15,	250000000,			500.00),
-    new PrestigeRank("Mafia Associate",				16,	500000000,			750.00),
-    new PrestigeRank("Junior Enforcer",				17,	1000000000,			1000.00),
-    new PrestigeRank("Senior Enforcer",				18,	2000000000,			1250.00),
+    new PrestigeRank("过街老鼠 I",				0,  25,         		2.22),
+    new PrestigeRank("过街老鼠 II",            	1,  100,        		4.44),
+    new PrestigeRank("过街老鼠 III",           	2,  400,        		6.66),
+    new PrestigeRank("小偷 I",         		3,  1000,       		8.88),
+    new PrestigeRank("小偷 II",				4,  2500,       		20.00),
+    new PrestigeRank("小偷 III",            	5,  10000,      		30.00),
+    new PrestigeRank("零售商 I",           			6,  25000,      		40.00),
+    new PrestigeRank("零售商 II",         			7,  50000,     			50.00),
+    new PrestigeRank("零售商 III",					8,  100000,     		75.00),
+    new PrestigeRank("准供应商",        9,  250000,    			100.00),
+    new PrestigeRank("毒品供应商 I",         	10, 1000000,			125.00),
+    new PrestigeRank("毒品供应商 II",			11, 5000000,			150.00),
+    new PrestigeRank("毒品供应商 III",			12, 17500000, 			200.00),
+    new PrestigeRank("毒品顾问",  				13, 50000000,   		300.00),
+    new PrestigeRank("帮派老大",  			14, 100000000,  		400.00),
+    new PrestigeRank("黑社会头目",					15,	250000000,			500.00),
+    new PrestigeRank("黑社会助理",				16,	500000000,			750.00),
+    new PrestigeRank("初级执法者",				17,	1000000000,			1000.00),
+    new PrestigeRank("高级执法者",				18,	2000000000,			1250.00),
     new PrestigeRank("Enforcer Captain",			19,	5000000000,			1500.00),
     new PrestigeRank("Mafia Lieutenant",			20,	10000000000,		2000.00),
     new PrestigeRank("Mafia Captain",				21,	25000000000,		3000.00),
@@ -73,11 +73,11 @@ var prestigeShoot = [
 ];
 var prestigeShootingOwned;
 var prestigeShooting = [
-	new PrestigeUpgrade("Enable auto-shooting",		100,	function() { prestigeShootingOwned = true; })
+	new PrestigeUpgrade("启用自动射击",		100,	function() { prestigeShootingOwned = true; })
 ];
 var prestigeReloadingOwned;
 var prestigeReloading = [
-	new PrestigeUpgrade("Enable auto-reloading",	100,	function() { prestigeReloadingOwned = true; })
+	new PrestigeUpgrade("启用自动装弹",	100,	function() { prestigeReloadingOwned = true; })
 ];
 
 function PrestigeRank(name, index, needed, multiplier) {
@@ -122,26 +122,26 @@ PrestigeUpgrade.init = function() {
 	for (var i = 0; i < prestigeUpgrades.length; i++) {
 		var p = prestigeUpgrades[i];
 		prestigeUpgradesOwned.push(false);
-		$("#prestige-upgrades").append('<li id="prestige-upgrade-' + (i+1) + '" class="list-group-item cur-p"><b>' + p.name + '</b> : cost ' + fix(p.price, "money") + ' experience');
+		$("#prestige-upgrades").append('<li id="prestige-upgrade-' + (i+1) + '" class="list-group-item cur-p"><b>' + p.name + '</b> : 花费 ' + fix(p.price, "money") + ' 经验');
 		$("#prestige-upgrade-" + (i+1)).attr("onclick", "PrestigeUpgrade.buy('drugs', " + i + ");");
 	};
 	prestigeShootOwned = [];
 	for (var i = 0; i < prestigeShoot.length; i++) {
 		var p = prestigeShoot[i];
 		prestigeShootOwned.push(false);
-		$("#prestige-shoot").append('<li id="prestige-shoot-' + (i+1) + '" class="list-group-item cur-p"><b>' + p.name + '</b> : cost ' + fix(p.price, "money") + ' experience');
+		$("#prestige-shoot").append('<li id="prestige-shoot-' + (i+1) + '" class="list-group-item cur-p"><b>' + p.name + '</b> : 花费 ' + fix(p.price, "money") + ' 经验');
 		$("#prestige-shoot-" + (i+1)).attr("onclick", "PrestigeUpgrade.buy('shoot', " + i + ");");
 	};
 	prestigeShootingOwned = false;
 	for (var i = 0; i < prestigeShooting.length; i++) {
 		var p = prestigeShooting[i];
-		$("#prestige-shooting").append('<li id="prestige-shooting-' + (i+1) + '" class="list-group-item cur-p"><b>' + p.name + '</b> : cost ' + fix(p.price, "money") + ' experience');
+		$("#prestige-shooting").append('<li id="prestige-shooting-' + (i+1) + '" class="list-group-item cur-p"><b>' + p.name + '</b> : 花费 ' + fix(p.price, "money") + ' 经验');
 		$("#prestige-shooting-" + (i+1)).attr("onclick", "PrestigeUpgrade.buy('autoshoot', " + i + ");");
 	};
 	prestigeReloadingOwned = false;
 	for (var i = 0; i < prestigeReloading.length; i++) {
 		var p = prestigeReloading[i];
-		$("#prestige-reloading").append('<li id="prestige-reloading-' + (i+1) + '" class="list-group-item cur-p"><b>' + p.name + '</b> : cost ' + fix(p.price, "money") + ' experience');
+		$("#prestige-reloading").append('<li id="prestige-reloading-' + (i+1) + '" class="list-group-item cur-p"><b>' + p.name + '</b> : 花费 ' + fix(p.price, "money") + ' 经验');
 		$("#prestige-reloading-" + (i+1)).attr("onclick", "PrestigeUpgrade.buy('autoreload', " + i + ");");
 	};
 };
@@ -152,7 +152,7 @@ PrestigeUpgrade.saveCheck = function() {
 		if (prestigeUpgradesOwned[i] == true) {
 			$("#prestige-upgrade-" + (i+1)).attr("onclick", "");
 			$("#prestige-upgrade-" + (i+1)).attr("class", "list-group-item up-list-group-owned");
-			$("#prestige-upgrade-" + (i+1)).append('<span class="badge">Owned</span>');
+			$("#prestige-upgrade-" + (i+1)).append('<span class="badge">拥有</span>');
 		};
 	};
 	for (var i = 0; i < prestigeShoot.length; i++) {

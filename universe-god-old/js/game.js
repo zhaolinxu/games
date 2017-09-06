@@ -53,17 +53,17 @@ game.init = function() {
 	g.options.init = true;
 };
 game.display = function() {
-	$("#ressources-display").html("Hydrogen : " + fix(g.ressources.owned[0], 0) + "<br>Oxygen : " + fix(g.ressources.owned[1], 0) + "<br>Helium : " +
-	fix(g.ressources.owned[2], 0) + "<br>Water : " + fix(g.ressources.owned[3], 0) + " mL<br>Meat : " + fix(g.ressources.owned[5], 2) +
-	"<br>Cells : " + fix(g.ressources.owned[4], 0) + "/" + fix(h.maxCells(), 0));
+	$("#ressources-display").html("氢原子 : " + fix(g.ressources.owned[0], 0) + "<br>氧原子 : " + fix(g.ressources.owned[1], 0) + "<br>氦原子 : " +
+	fix(g.ressources.owned[2], 0) + "<br>水 : " + fix(g.ressources.owned[3], 0) + " mL<br>肉 : " + fix(g.ressources.owned[5], 2) +
+	"<br>细胞 : " + fix(g.ressources.owned[4], 0) + "/" + fix(h.maxCells(), 0));
 };
 game.buttons = function() {
-	$("#btn-1-1").html("Create hydrogen (+" + fix(g.ressources.perClick[0], 0) + ")");
-	$("#btn-1-2").html("Create oxygen (+" + fix(g.ressources.perClick[1], 0) + ")");
-	$("#btn-1-3").html("Create helium (+" + fix(g.ressources.perClick[2], 0) + ")");
-	$("#btn-2-1").html("Generate water (+" + fix(g.ressources.perClick[3] * g.buyMultiplier, 0) + " mL)");
+	$("#btn-1-1").html("制造氢原子 (+" + fix(g.ressources.perClick[0], 0) + ")");
+	$("#btn-1-2").html("制造氧原子 (+" + fix(g.ressources.perClick[1], 0) + ")");
+	$("#btn-1-3").html("制造氦原子 (+" + fix(g.ressources.perClick[2], 0) + ")");
+	$("#btn-2-1").html("制造水 (+" + fix(g.ressources.perClick[3] * g.buyMultiplier, 0) + " mL)");
 	$("#btn-2-1").attr('data-original-title', 'Cost ' + fix((20 * g.buyMultiplier), 0) + ' hydrogen, ' + fix((10 * g.buyMultiplier), 0) + ' oxygen');
-	$("#btn-3-1").html("Generate cell (+" + fix(g.ressources.perClick[4] * g.buyMultiplier, 0) + ")");
+	$("#btn-3-1").html("生成细胞 (+" + fix(g.ressources.perClick[4] * g.buyMultiplier, 0) + ")");
 	$("#btn-3-1").attr('data-original-title', 'Cost ' + fix((g.cellCost * g.buyMultiplier), 0) + ' helium')
 
 	if (g.ressources.owned[6] == 1)

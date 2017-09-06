@@ -6,29 +6,29 @@ g.t.fast = {
 };
 g.t.back = {
 	check: false,
-	string: 'Welcome back to <b>Universe-God</b>!'
+	string: '欢迎回到<b>宇宙之神</b>!'
 };
 g.t.intro1 = {
 	check: false,
-	string: 'Welcome to <b>Universe-God</b>.<br> ' +
-			"In this game, you are the god.<br> " +
-			"Your first goal is to create your first <b>habitable</b> planet, let's call this planet <b>the Earth</b>.<br> " +
-			"Reach <b>20 atoms</b> of hydrogen and <b>10 atoms</b> of oxygen." + g.t.spacer
+	string: '欢迎来到<b>宇宙之神</b>.<br> ' +
+			"在这个游戏里面，你就是神。<br> " +
+			"你的第一个目标是创建你的第一个 <b>可居住的</b> 星球, 让我们称呼这个星球为<b>地球</b>.<br> " +
+			"现在，让我们来制作20个氢原子和10个氧原子。" + g.t.spacer
 };
 g.t.intro2 = {
 	check: false,
-	string: 'Good job! You can now generate some <b>water</b>.<br> ' +
-			"Water cost 20 hydrogen and 10 oxygen : this cost doesn't increase!<br> " +
-			"You can also buy some <b>upgrades</b> to help you earn more <b>ressources/click</b>.<br> " +
-			"Reach <b>3 mL</b> of water. " + g.t.spacer
+	string: '干得不错! 你现在可以合成 <b>水</b>了.<br> ' +
+			"水会消耗20个氢原子和10个氧原子 : 这笔费用不会增加！<br> " +
+			"您也可以购买一些<b>升级</ b>，以帮助您赚取更多的<b>资源/点击</ b>。<br> " +
+			"制作<b>3 mL</b>水. " + g.t.spacer
 };
 g.t.intro3 = {
 	check: false,
-	string: "Nice, your planet now got some <b>water</b>, but this water is cold.<br> " +
-			"You need to raise the <b>temperature</b>.<br> " +
-			"Let's create a <b>sun</b>. To make it, you need :<br> " +
-			"75 hydrogen, 15 helium and 10 oxygen.<br> " +
-			"Then, create the Sun." + g.t.spacer
+	string: "很好, 你的星球现在有一些<b>水</ b>，但是这水很冷 " +
+			"您需要提高<b>温度</ b>。<br>" +
+			"我们创建一个<b>太阳</ b>。 要做到这一点，你需要：<br> " +
+			"75 氢, 15 氦 和 10 氧.<br> " +
+			"然后，创造太阳." + g.t.spacer
 };
 g.t.intro4 = {
 	check: false,
