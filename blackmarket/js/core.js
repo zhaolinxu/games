@@ -54,7 +54,7 @@ Init.variables = function() {
 	Log("Calling Init.variables()");
 	money = [0, 0];
 	shoot = [12, 1, 12, 1500, 5000, 0, 0, 1];
-    prestige = [0, 0, 1, "no rank"];
+    prestige = [0, 0, 1, "无等级"];
     shootPercent = 0;
     shootPercentCash = 0;
     experienceSpent = 0;
