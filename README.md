@@ -24,6 +24,6 @@ Idle-Quester是原始应用程序/游戏“ [Idle-Quest](https://play.google.com
 # 我参与汉化的游戏
 ## [猫国建设中](https://zhaolinxu.github.io/cat-zh/)
 ## [脆皮](https://zhaolinxu.github.io/cuipi/)
-## [黑市](https://github.com/zhaolinxu/games/blackmarket/)
+## [黑市](https://zhaolinxu.github.io/games/blackmarket/)
 
 
