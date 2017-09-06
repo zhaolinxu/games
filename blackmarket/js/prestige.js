@@ -18,26 +18,26 @@ var prestigeRanks = [
     new PrestigeRank("黑社会助理",				16,	500000000,			750.00),
     new PrestigeRank("初级执法者",				17,	1000000000,			1000.00),
     new PrestigeRank("高级执法者",				18,	2000000000,			1250.00),
-    new PrestigeRank("Enforcer Captain",			19,	5000000000,			1500.00),
-    new PrestigeRank("Mafia Lieutenant",			20,	10000000000,		2000.00),
-    new PrestigeRank("Mafia Captain",				21,	25000000000,		3000.00),
-    new PrestigeRank("Mafia Drug Advisor",			22,	50000000000,		4000.00),
-    new PrestigeRank("Mafia Under-boss",			23,	100000000000,		5000.00),
-    new PrestigeRank("Mafia Consigliere",			24,	200000000000,		6000.00),
-    new PrestigeRank("Mafia Boss",					25,	500000000000,		7000.00),
-    new PrestigeRank("Mafia Don",					26,	1000000000000,		9000.00),
-    new PrestigeRank("Drug Mastermind",				27,	1500000000000,		11000.00),
-    new PrestigeRank("Drug Baron",					28,	3000000000000,		13000.00),
-    new PrestigeRank("Drug Kingpin",				29,	7500000000000,		15000.00),
-    new PrestigeRank("Drug Emperor",				30,	15000000000000,		17000.00),
-    new PrestigeRank("Legendary Drug-lord I",		31,	30000000000000,		19000.00),
-    new PrestigeRank("Legendary Drug-lord II",		32,	50000000000000,		21000.00),
-    new PrestigeRank("Legendary Drug-lord III",		33,	100000000000000,	25000.00),
-    new PrestigeRank("Legendary Drug-lord IV",		34,	250000000000000,	30000.00),
-    new PrestigeRank("Legendary Drug-lord V",		35,	750000000000000,	35000.00),
-    new PrestigeRank("Prestigious Drug-lord I",		36,	1250000000000000,	40000.00),
-    new PrestigeRank("Prestigious Drug-lord II",	37,	2500000000000000,	50000.00),
-    new PrestigeRank("Prestigious Drug-lord III",	38,	10000000000000000,	60000.00)
+    new PrestigeRank("",			19,	5000000000,			1500.00),
+    new PrestigeRank("黑手党中将",			20,	10000000000,		2000.00),
+    new PrestigeRank("黑手党队长",				21,	25000000000,		3000.00),
+    new PrestigeRank("黑手党毒品顾问",			22,	50000000000,		4000.00),
+    new PrestigeRank("黑手党老板之下",			23,	100000000000,		5000.00),
+    new PrestigeRank("黑手党军师",			24,	200000000000,		6000.00),
+    new PrestigeRank("黑手党老板",					25,	500000000000,		7000.00),
+    new PrestigeRank("黑手党唐",					26,	1000000000000,		9000.00),
+    new PrestigeRank("毒品主脑",				27,	1500000000000,		11000.00),
+    new PrestigeRank("毒品男爵",					28,	3000000000000,		13000.00),
+    new PrestigeRank("毒品盟主",				29,	7500000000000,		15000.00),
+    new PrestigeRank("毒品皇帝",				30,	15000000000000,		17000.00),
+    new PrestigeRank("传奇毒品领主 I",		31,	30000000000000,		19000.00),
+    new PrestigeRank("传奇毒品领主 II",		32,	50000000000000,		21000.00),
+    new PrestigeRank("传奇毒品领主 III",		33,	100000000000000,	25000.00),
+    new PrestigeRank("传奇毒品领主 IV",		34,	250000000000000,	30000.00),
+    new PrestigeRank("传奇 V",		35,	750000000000000,	35000.00),
+    new PrestigeRank("久负盛名的毒品领主 I",		36,	1250000000000000,	40000.00),
+    new PrestigeRank("久负盛名的毒品领主 II",	37,	2500000000000000,	50000.00),
+    new PrestigeRank("久负盛名的毒品领主 III",	38,	10000000000000000,	60000.00)
 ];
 var prestigeUpgradesOwned;
 var prestigeUpgrades = [
@@ -103,7 +103,7 @@ PrestigeRank.fillTable = function() {
 		$("#tr-" + i).append('<td id="td-exp-' + i + '"></td>');
 		$("#tr-" + i).append('<td id="td-multiplier-' + i + '"></td>');
 		$("#td-rank-" + i).html(p.name);
-		$("#td-exp-" + i).html(fix(p.needed, "prestige") + " exp.");
+		$("#td-exp-" + i).html(fix(p.needed, "prestige") + " 经验.");
 		$("#td-multiplier-" + i).html("x" + fix(p.multiplier, "multiplier"));
 		if (isOdd(i) == 1) {
 			$("#tr-" + i).attr("class", "success");

@@ -33,5 +33,5 @@ Player.init = function() {
 	pi.jade = 0;
 	pi.ruby = 0;
 	pi.saphire = 0;
-	$("#s-version").html("Current game version : v" + version + release);
+	$("#s-version").html("当前游戏版本号是 : v" + version + release);
 };

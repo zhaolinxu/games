@@ -3,7 +3,7 @@ var totalMoneyAch = [
 	new Achievement("百万富翁", 					"获得 $1.000 百万的总金额",		1e6),
 	new Achievement("亿万富翁",					"获得 $1.000 十亿的总金额",		1e9),
 	new Achievement("万亿富翁",					"获得 $1.000 兆的总金额",		1e12),
-	new Achievement("",				"获得 $1.000 万亿的总金额",	1e15),
+	new Achievement("Quadrillionaire",				"获得 $1.000 万亿的总金额",	1e15),
 	new Achievement("Quintillionaire",				"获得 $1.000 千万亿的总金额",	1e18),
 	new Achievement("Sextillionaire",				"获得 $1.000 的总金额",	1e21),
 	new Achievement("Septillionaire",				"获得 $1.000 septillion的总金额",	1e24),

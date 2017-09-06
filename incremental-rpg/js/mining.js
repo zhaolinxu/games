@@ -1,9 +1,9 @@
 var miningBuilds = [
-	new Mining("Coal Miner",	200,	'coal',		1, 	1),
-	new Mining("Crystal Miner",	2500,	'crystal',	1,	5),
-	new Mining("Jade Miner",	10000,	'jade',		1,	10),
-	new Mining("Ruby Miner",	50000,	'ruby',		1,	20),
-	new Mining("Saphire Miner",	250000,	'saphire',	1,	40),
+	new Mining("煤矿工",	200,	'coal',		1, 	1),
+	new Mining("水晶矿工",	2500,	'crystal',	1,	5),
+	new Mining("玉矿工",	10000,	'jade',		1,	10),
+	new Mining("红宝石矿工",	50000,	'ruby',		1,	20),
+	new Mining("蓝宝石矿工",	250000,	'saphire',	1,	40),
 ];
 var miningBuildsOwned = [];
 
@@ -72,8 +72,8 @@ Mining.check = function() {
 		var m = miningBuilds[i];
 		var o = miningBuildsOwned[i];
 		$("#m-n" + (i+1)).html(m.name);
-		$("#m-p" + (i+1)).html(beautify(getMiningBuildPrice(i), 0) + " gold");
-		$("#m-o" + (i+1)).html(o + " owned");
+		$("#m-p" + (i+1)).html(beautify(getMiningBuildPrice(i), 0) + " 黄金");
+		$("#m-o" + (i+1)).html(o + " 拥有");
 		$("#m-l" + (i+1)).html(m.levelReq);
 		$("#m-b" + (i+1)).attr("onclick", 'Mining.buy(' + i + ');');
 	};

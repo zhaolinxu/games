@@ -56,15 +56,15 @@ Monster.createDivs = function() {
 			$("#monster-row" + lmi).append('<div id="monster-medcol' + lmi + '" class="col-md-5"></div>');
 			$("#monster-row" + lmi).append('<div id="monster-smcol' + lmi + '" class="col-md-2"></div>');
 			// attack button (col-md-2)
-			$("#monster-smcol" + lmi).append('<a class="btn btn-default btn-sm" onclick="Monster.attack(' + lmi + ');"">Attack!</a>');
+			$("#monster-smcol" + lmi).append('<a class="btn btn-default btn-sm" onclick="Monster.attack(' + lmi + ');"">攻击!</a>');
 			// health-bar with text (col-md-6)
 			$("#monster-col" + lmi).append('<div id="monster-healthbar' + lmi + '" class="progress"></div>');
 			$("#monster-healthbar" + lmi).append('<div id="monster-hb' + lmi + '" class="progress-bar progress-bar-danger" style="width: 100%"></div>')
-			$("#monster-hb" + lmi).append('<span id="monster-hpdisplay' + lmi + '" class="monster-bar-hp">' + lm.hp + "/" + lm.maxHp + ' HP</span>');
+			$("#monster-hb" + lmi).append('<span id="monster-hpdisplay' + lmi + '" class="monster-bar-hp">' + lm.hp + "/" + lm.maxHp + ' 血量</span>');
 			// monster info + img (col-md-4)
 			$("#monster-medcol" + lmi).append('<img class="stats" src="img/E_Bones01.png"> ');
 			$("#monster-medcol" + lmi).append('<span id="monster-info' + lmi + '"></span>');
-			$("#monster-info" + lmi).html(lm.name + ", attack : " + lm.damage);
+			$("#monster-info" + lmi).html(lm.name + ", 伤害 : " + lm.damage);
 		};
 	};
 };
@@ -81,7 +81,7 @@ Monster.attack = function(index) {
 			ps.xp += liveMonsters[index].xp;
 			getLevelUp();
 			if (ps.level > oldLevel) {
-				$("#alerts").append('<div id="alert-lvl" class="alert alert-success fade in" role="alert"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button><p class="light center small-font">You gained 1 level! Yay hooray!</p></div>')
+				$("#alerts").append('<div id="alert-lvl" class="alert alert-success fade in" role="alert"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button><p class="light center small-font">你升了1级！ 耶万岁！</p></div>')
 			};
 			$("#monster-" + index).remove();
 			Adventure.end(); // check if adventure is finished

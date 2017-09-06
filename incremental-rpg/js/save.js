@@ -12,10 +12,10 @@ function manualSave() {
     };
     var saved = JSON.stringify(toSave);
     var exportSave = btoa(saved);
-    prompt("Here is your encoded save, keep-it safe!", exportSave);
+    prompt("这是你的游戏存档，把它保存在一个安全的地方！", exportSave);
 };
 function manualLoad() {
-    var importSave = prompt("You need to import the code from the save button.", "Put your exported-save here!");
+    var importSave = prompt("您需要从保存按钮导入代码。", "在这里粘贴你的存档代码");
     var cleanSave = atob(importSave); var savegame = JSON.parse(cleanSave);
     var s = savegame; var sp = savegame.player; var sps = savegame.player.stats; var spi = savegame.player.item;
 
@@ -86,7 +86,7 @@ function saveData() {
             swordOwned: swordOwned
         };
         localStorage.setItem("IncRPG_Save", JSON.stringify(toSave));
-        Log("Game saved!");
+        Log("游戏已保存!");
     };
 };
 function loadData() {
@@ -146,12 +146,12 @@ function loadData() {
             amuletsOwned = s.amuletsOwned;
             swordOwned = s.swordOwned;
 
-            Log("Game loaded!");
+            Log("游戏加载成功!");
         };
     };
 };
 function resetData() {
-    if (confirm("Do you really want to wipe your save and reset everything from scratch? You will not gain any bonuses.")) {
+    if (confirm("你真的想擦除你的保存并从头重新设置一切吗？ 你不会得到任何奖励。")) {
         clearInterval(saveInterval);
         localStorage.removeItem("IncRPG_Save");
         location.reload();

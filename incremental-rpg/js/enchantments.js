@@ -1,5 +1,5 @@
 var enchantments = [
-	new Enchant("Lightning Sword",	"Boosts sword damage!",		'sword',	20,		'jade',		5,	100, "img/W_Sword015.png")
+	new Enchant("闪电剑",	"提升剑的伤害！",		'剑',	20,		'玉',		5,	100, "img/W_Sword015.png")
 ];
 var enchantmentsOwned = [];
 
