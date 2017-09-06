@@ -1,16 +1,16 @@
 var shootRewardUpgradesOwned;
 var shootRewardUpgrades = [
-    new Upgrade("Paper Targets",                                10,         			    function() { shoot[7] *= 5 },   "射击奖励 x5"),
-    new Upgrade("Paper Targets II",                             100,         			    function() { shoot[7] *= 4 },   "射击奖励 x4"),
-    new Upgrade("Glow-in-the-Dark Paper Targets",               240,         			    function() { shoot[7] *= 2 },   "射击奖励 x2"),
-	new Upgrade("Indoor Range",                                 650,         			    function() { shoot[7] *= 1.5 }, "射击奖励 x1.5"),
-    new Upgrade("Indoor Range II",                              15000,        			    function() { shoot[7] *= 2 },   "射击奖励 x2"),
-    new Upgrade("Indoor Range Upgrade",                         32000,       			    function() { shoot[7] *= 2 },   "射击奖励 x2"),
-    new Upgrade("Moving Targets",                               240000,      			    function() { shoot[7] *= 2 },   "射击奖励 x2"),
-    new Upgrade("Moving Targets II",		                    2040000,					function() { shoot[7] *= 2 },   "射击奖励 x2"),
-    new Upgrade("Faster Targets",	                            132500000,				    function() { shoot[7] *= 2.66 },"射击奖励 x2.66"),
-    new Upgrade("Personal Trainer",	                            3850000000,				    function() { shoot[7] *= 2.88 },"射击奖励 x2.88"),
-    new Upgrade("Camera Review System",		                    27500000000, 			    function() { shoot[7] *= 3 },   "射击奖励 x3"),
+    new Upgrade("纸张目标",                                10,         			    function() { shoot[7] *= 5 },   "射击奖励 x5"),
+    new Upgrade("纸张目标 II",                             100,         			    function() { shoot[7] *= 4 },   "射击奖励 x4"),
+    new Upgrade("发光黑暗的纸张目标",               240,         			    function() { shoot[7] *= 2 },   "射击奖励 x2"),
+	new Upgrade("室内范围",                                 650,         			    function() { shoot[7] *= 1.5 }, "射击奖励 x1.5"),
+    new Upgrade("室内范围 II",                              15000,        			    function() { shoot[7] *= 2 },   "射击奖励 x2"),
+    new Upgrade("室内范围升级",                         32000,       			    function() { shoot[7] *= 2 },   "射击奖励 x2"),
+    new Upgrade("移动目标",                               240000,      			    function() { shoot[7] *= 2 },   "射击奖励 x2"),
+    new Upgrade("移动目标 II",		                    2040000,					function() { shoot[7] *= 2 },   "射击奖励 x2"),
+    new Upgrade("快速目标",	                            132500000,				    function() { shoot[7] *= 2.66 },"射击奖励 x2.66"),
+    new Upgrade("私人教练",	                            3850000000,				    function() { shoot[7] *= 2.88 },"射击奖励 x2.88"),
+    new Upgrade("相机评测系统",		                    27500000000, 			    function() { shoot[7] *= 3 },   "射击奖励 x3"),
     new Upgrade("Digital Impact System",		                5000000000000,			    function() { shoot[7] *= 3 },   "射击奖励 x3"),
     new Upgrade("Indoor Range III",		                        25000000000000,			    function() { shoot[7] *= 2 },   "射击奖励 x2"),
     new Upgrade("Indoor Range Armory",		                    250000000000000,			function() { shoot[7] *= 2 },   "射击奖励 x2"),
@@ -24,8 +24,8 @@ var shootRewardUpgrades = [
     new Upgrade("Close-Quarter Range Tower",		            25000000000000000000,	    function() { shoot[7] *= 2 },   "射击奖励 x2"),
     new Upgrade("Sniper School",		                        50000000000000000000,	    function() { shoot[7] *= 3 },   "射击奖励 x3"),
     new Upgrade("2,000 Acre Sniper Range",		                75000000000000000000,	    function() { shoot[7] *= 3 },   "射击奖励 x3"),
-    new Upgrade("Sniper Range Digital Overhaul",		        500000000000000000000,	    function() { shoot[7] *= 2 },   "射击奖励 x2"),
-	new Upgrade("25,000 Acre Range Expansion/Upgrade",          1000000000000000000000,     function() { shoot[7] *= 2 },   "射击奖励 x2")
+    new Upgrade("狙击手距离数码检修",		        500000000000000000000,	    function() { shoot[7] *= 2 },   "射击奖励 x2"),
+	new Upgrade("25,000 英亩范围扩张/升级",          1000000000000000000000,     function() { shoot[7] *= 2 },   "射击奖励 x2")
 ];
 
 var shootTimeUpgradesOwned;
