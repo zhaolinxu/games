@@ -21,10 +21,11 @@ Idle-Quester是原始应用程序/游戏“ [Idle-Quest](https://play.google.com
 ### [Universe-God](http://totominc.github.io/universe-god)
 我最新的项目之一，将永远保持原型。
 
-# 汉化的游戏
+# 好玩的汉化的游戏
 ## [猫国建设中](https://zhaolinxu.github.io/cat-zh/)
 ## [脆皮](https://zhaolinxu.github.io/cuipi/)
 ## [黑市](https://zhaolinxu.github.io/games/blackmarket/)
 ## [小黑屋](https://zhaolinxu.github.io/adarkroom/)
+## [太空公司](https://zhaolinxu.github.io/SpaceCompany/)
 
 
