@@ -75,9 +75,9 @@ var prestigeShoot = [
 //    new PrestigeRank("过街老鼠 I",				0,  25,         		2.22),
 //    new PrestigeRank("过街老鼠 II",            	1,  100,        		4.44),
 //    new PrestigeRank("过街老鼠 III",           	2,  400,        		6.66),
-//    new PrestigeRank("小偷 I",         		3,  1000,       		8.88),
-//    new PrestigeRank("小偷 II",				4,  2500,       		20.00),
-//    new PrestigeRank("小偷 III",            	5,  10000,      		30.00),
+//    new PrestigeRank("小盗贼 I",         		3,  1000,       		8.88),
+//    new PrestigeRank("小盗贼 II",				4,  2500,       		20.00),
+//    new PrestigeRank("小盗贼 III",            	5,  10000,      		30.00),
 //    new PrestigeRank("零售商 I",           			6,  25000,      		40.00),
 //    new PrestigeRank("零售商 II",         			7,  50000,     			50.00),
 //    new PrestigeRank("零售商 III",					8,  100000,     		75.00),
@@ -86,31 +86,31 @@ var prestigeShoot = [
 //    new PrestigeRank("毒品供应商 II",			11, 5000000,			150.00),
 //    new PrestigeRank("毒品供应商 III",			12, 17500000, 			200.00),
 //    new PrestigeRank("毒品顾问",  				13, 50000000,   		300.00),
-//    new PrestigeRank("帮派老大",  			14, 100000000,  		400.00),
+//    new PrestigeRank("帮派二头目",  			14, 100000000,  		400.00),
 //    new PrestigeRank("黑社会头目",					15,	250000000,			500.00),
 //    new PrestigeRank("黑社会助理",				16,	500000000,			750.00),
 //    new PrestigeRank("初级执法者",				17,	1000000000,			1000.00),
 //    new PrestigeRank("高级执法者",				18,	2000000000,			1250.00),
-//    new PrestigeRank("",			19,	5000000000,			1500.00),
+//    new PrestigeRank("执法队长",			19,	5000000000,			1500.00),
 //    new PrestigeRank("黑手党中将",			20,	10000000000,		2000.00),
 //    new PrestigeRank("黑手党队长",				21,	25000000000,		3000.00),
 //    new PrestigeRank("黑手党毒品顾问",			22,	50000000000,		4000.00),
-//    new PrestigeRank("黑手党老板之下",			23,	100000000000,		5000.00),
+//    new PrestigeRank("黑手党二老板",			23,	100000000000,		5000.00),
 //    new PrestigeRank("黑手党军师",			24,	200000000000,		6000.00),
-//    new PrestigeRank("黑手党老板",					25,	500000000000,		7000.00),
+//    new PrestigeRank("黑手党老大",					25,	500000000000,		7000.00),
 //    new PrestigeRank("黑手党唐",					26,	1000000000000,		9000.00),
-//    new PrestigeRank("毒品主脑",				27,	1500000000000,		11000.00),
+//    new PrestigeRank("毒品主管",				27,	1500000000000,		11000.00),
 //    new PrestigeRank("毒品男爵",					28,	3000000000000,		13000.00),
 //    new PrestigeRank("毒品盟主",				29,	7500000000000,		15000.00),
 //    new PrestigeRank("毒品皇帝",				30,	15000000000000,		17000.00),
-//    new PrestigeRank("传奇毒品领主 I",		31,	30000000000000,		19000.00),
-//    new PrestigeRank("传奇毒品领主 II",		32,	50000000000000,		21000.00),
-//    new PrestigeRank("传奇毒品领主 III",		33,	100000000000000,	25000.00),
-//    new PrestigeRank("传奇毒品领主 IV",		34,	250000000000000,	30000.00),
-//    new PrestigeRank("传奇 V",		35,	750000000000000,	35000.00),
-//    new PrestigeRank("久负盛名的毒品领主 I",		36,	1250000000000000,	40000.00),
-//    new PrestigeRank("久负盛名的毒品领主 II",	37,	2500000000000000,	50000.00),
-//    new PrestigeRank("久负盛名的毒品领主 III",	38,	10000000000000000,	60000.00)
+//    new PrestigeRank("传奇药主 I",		31,	30000000000000,		19000.00),
+//    new PrestigeRank("传奇药主 II",		32,	50000000000000,		21000.00),
+//    new PrestigeRank("传奇药主 III",		33,	100000000000000,	25000.00),
+//    new PrestigeRank("传奇药主 IV",		34,	250000000000000,	30000.00),
+//    new PrestigeRank("传奇药主 V",		35,	750000000000000,	35000.00),
+//    new PrestigeRank("久负盛名的药主 I",		36,	1250000000000000,	40000.00),
+//    new PrestigeRank("久负盛名的药主 II",	37,	2500000000000000,	50000.00),
+//    new PrestigeRank("久负盛名的药主 III",	38,	10000000000000000,	60000.00)
 //];
 //var prestigeUpgradesOwned;
 //var prestigeUpgrades = [
@@ -134,15 +134,15 @@ var prestigeShoot = [
 //];
 //var prestigeShootOwned;
 //var prestigeShoot = [
-//	new PrestigeUpgrade("射击赚取 1% of $/秒",	250,		function() { shootPercent += 1; }),
-//	new PrestigeUpgrade("射击赚取 1% of $/秒",	6666,		function() { shootPercent += 1; }),
-//	new PrestigeUpgrade("射击赚取 1% of $/秒",	35000,		function() { shootPercent += 1; }),
-//	new PrestigeUpgrade("射击赚取 1% of $/秒",	75000,		function() { shootPercent += 1; }),
-//	new PrestigeUpgrade("射击赚取 1% of $/秒",	250000,		function() { shootPercent += 1; }),
-//	new PrestigeUpgrade("射击赚取 2% of $/秒",	1000000,	function() { shootPercent += 2; }),
-//	new PrestigeUpgrade("射击赚取 2% of $/秒",	75000000,	function() { shootPercent += 2; }),
-//	new PrestigeUpgrade("射击赚取 2% of $/秒",	250000000,	function() { shootPercent += 2; }),
-//	new PrestigeUpgrade("射击赚取 4% of $/秒",	1000000000,	function() { shootPercent += 4; })
+//	new PrestigeUpgrade("射击赚取 1% 总 $/秒",	250,		function() { shootPercent += 1; }),
+//	new PrestigeUpgrade("射击赚取 1% 总 $/秒",	6666,		function() { shootPercent += 1; }),
+//	new PrestigeUpgrade("射击赚取 1% 总 $/秒",	35000,		function() { shootPercent += 1; }),
+//	new PrestigeUpgrade("射击赚取 1% 总 $/秒",	75000,		function() { shootPercent += 1; }),
+//	new PrestigeUpgrade("射击赚取 1% 总 $/秒",	250000,		function() { shootPercent += 1; }),
+//	new PrestigeUpgrade("射击赚取 2% 总 $/秒",	1000000,	function() { shootPercent += 2; }),
+//	new PrestigeUpgrade("射击赚取 2% 总 $/秒",	75000000,	function() { shootPercent += 2; }),
+//	new PrestigeUpgrade("射击赚取 2% 总 $/秒",	250000000,	function() { shootPercent += 2; }),
+//	new PrestigeUpgrade("射击赚取 4% 总 $/秒",	1000000000,	function() { shootPercent += 4; })
 //];
 
 var prestigeShootingOwned;

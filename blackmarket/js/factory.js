@@ -3,10 +3,10 @@ var partsTrigged = [];
 var currentTimeParts = [];
 var partsTimeMultiplier = [];
 var parts = [
-	new Part("Magazine",	0,	25),
-	new Part("Trigger",		0,	10),
-	new Part("Barrel",		0,	15),
-	new Part("Grip",		0,	30)
+	new Part("弹匣",	0,	25),
+	new Part("扳机",		0,	10),
+	new Part("枪管",		0,	15),
+	new Part("把手",		0,	30)
 ];
 
 var gunsOwned = [];
@@ -37,7 +37,7 @@ Part.init = function() {
 		$("#factory-parts-table-tr-" + (i+1)).append('<td id="factory-parts-table-name-' + (i+1) + '">' + parts[i].name + '</td>');
 		$("#factory-parts-table-tr-" + (i+1)).append('<td id="factory-parts-table-time-' + (i+1) + '">' + currentTimeParts[i] + '</td>');
 		$("#factory-parts-table-tr-" + (i+1)).append('<td id="factory-parts-table-owned-' + (i+1) + '">' + partsOwned[i] + '</td>');
-		$("#factory-parts-table-tr-" + (i+1)).append('<td id="factory-parts-table-craft-' + (i+1) + '">' + '<a id="factory-parts-btn-' + (i+1) + '" class="btn btn-success btn-sm center-block" onclick="Part.craft(' + i + ');">Craft</a>' + '</td>');
+		$("#factory-parts-table-tr-" + (i+1)).append('<td id="factory-parts-table-craft-' + (i+1) + '">' + '<a id="factory-parts-btn-' + (i+1) + '" class="btn btn-success btn-sm center-block" onclick="Part.craft(' + i + ');">制造</a>' + '</td>');
 	};
 };
 Part.craft = function(index) {
@@ -51,7 +51,7 @@ Part.update = function(times) {
 		if (partsTrigged[i] == true) {
 			if (currentTimeParts[i] >= 0) {
 				currentTimeParts[i] -= times/fps;
-				$("#factory-parts-table-time-" + (i+1)).html(Math.round(currentTimeParts[i]) + " sec");
+				$("#factory-parts-table-time-" + (i+1)).html(Math.round(currentTimeParts[i]) + " 秒");
 				$("#factory-parts-btn-" + (i+1)).attr('disabled', 'disabled');
 			} else {
 				currentTimeParts[i] = false;
@@ -59,7 +59,7 @@ Part.update = function(times) {
 				partsOwned[i]++;
 				Part.check();
 				Gun.check();
-				$("#factory-parts-table-time-" + (i+1)).html(parts[i].time + " sec");
+				$("#factory-parts-table-time-" + (i+1)).html(parts[i].time + " 秒");
 				if (enableAutoCraft.checked == true) {
 					$("#factory-parts-btn-" + (i+1)).attr('disabled', 'disabled');
 				} else {
@@ -72,7 +72,7 @@ Part.update = function(times) {
 Part.check = function() {
 	for (var i = 0; i < parts.length; i++) {
 		$("#factory-parts-table-owned-" + (i+1)).html(partsOwned[i]);
-		$("#factory-parts-table-time-" + (i+1)).html(parts[i].time + " sec");
+		$("#factory-parts-table-time-" + (i+1)).html(parts[i].time + " 秒");
 	};
 };
 Part.autocraft = function() {
@@ -110,7 +110,7 @@ Gun.init = function() {
 		$("#factory-guns-table-tr-" + (i+1)).append('<td id="factory-guns-table-name-' + (i+1) + '">' + guns[i].name + '</td>');
 		$("#factory-guns-table-tr-" + (i+1)).append('<td id="factory-guns-table-time-' + (i+1) + '">' + currentTimeGuns[i] + '</td>');
 		$("#factory-guns-table-tr-" + (i+1)).append('<td id="factory-guns-table-owned-' + (i+1) + '">' + gunsOwned[i] + '</td>');
-		$("#factory-guns-table-tr-" + (i+1)).append('<td id="factory-guns-table-craft-' + (i+1) + '">' + '<a id="factory-guns-btn-' + (i+1) + '" class="btn btn-success btn-sm center-block" onclick="Gun.craft(' + i + ');">Craft</a>' + '</td>');
+		$("#factory-guns-table-tr-" + (i+1)).append('<td id="factory-guns-table-craft-' + (i+1) + '">' + '<a id="factory-guns-btn-' + (i+1) + '" class="btn btn-success btn-sm center-block" onclick="Gun.craft(' + i + ');">制造</a>' + '</td>');
 	};
 };
 Gun.craft = function(index) {
@@ -128,7 +128,7 @@ Gun.update = function(times) {
 		if (gunsTrigged[i] == true) {
 			if (currentTimeGuns[i] >= 0) {
 				currentTimeGuns[i] -= times/fps;
-				$("#factory-guns-table-time-" + (i+1)).html(Math.round(currentTimeGuns[i]) + " sec");
+				$("#factory-guns-table-time-" + (i+1)).html(Math.round(currentTimeGuns[i]) + " 秒");
 				$("#factory-guns-btn-" + (i+1)).attr('disabled', 'disabled');
 			} else {
 				currentTimeGuns[i] = false;
@@ -141,7 +141,7 @@ Gun.update = function(times) {
 				} else {
 					$("#factory-guns-btn-" + (i+1)).removeAttr('disabled');
 				};
-				$("#factory-guns-table-time-" + (i+1)).html(Math.round(guns[i].time) + " sec");
+				$("#factory-guns-table-time-" + (i+1)).html(Math.round(guns[i].time) + " 秒");
 			};
 		};
 	};
@@ -149,7 +149,7 @@ Gun.update = function(times) {
 Gun.check = function() {
 	for (var i = 0; i < guns.length; i++) {
 		$("#factory-guns-table-owned-" + (i+1)).html(gunsOwned[i]);
-		$("#factory-guns-table-time-" + (i+1)).html(guns[i].time + " sec");
+		$("#factory-guns-table-time-" + (i+1)).html(guns[i].time + " 秒");
 		$("#market-guns-table-owned-" + (i+1)).html(gunsOwned[i]);
 	};
 };
@@ -191,7 +191,7 @@ Market.init = function() {
 		$("#market-guns-table-tr-" + (i+1)).append('<td id="market-guns-table-name-' + (i+1) + '">' + guns[i].name + '</td>');
 		$("#market-guns-table-tr-" + (i+1)).append('<td id="market-guns-table-reward-' + (i+1) + '">' + fix(getGunReward(i), 'money') + '$</td>');
 		$("#market-guns-table-tr-" + (i+1)).append('<td id="market-guns-table-owned-' + (i+1) + '">' + gunsOwned[i] + '</td>');
-		$("#market-guns-table-tr-" + (i+1)).append('<td id="market-guns-table-sell-' + (i+1) + '">' + '<a class="btn btn-success btn-sm center-block" onclick="Gun.sell(' + i + ');">Sell</a>' + '</td>');
+		$("#market-guns-table-tr-" + (i+1)).append('<td id="market-guns-table-sell-' + (i+1) + '">' + '<a class="btn btn-success btn-sm center-block" onclick="Gun.sell(' + i + ');">卖出</a>' + '</td>');
 	};
 };
 Market.check = function() {
